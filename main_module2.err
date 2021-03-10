@@ -1,0 +1,4 @@
+>>> Warning 203 "main_module2.c" Line 76(1,1): Condition always TRUE
+*** Error 112 "C:\Program Files (x86)\PICC\Drivers\lcd.c" Line 327(1,1): Function used but not defined:  ... delay_ms 429  SCR=3916
+      1 Errors,  1 Warnings.
+Build Failed.

@@ -1,0 +1,59 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+006     lcd
+006     lcdlat
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+077     @SCRATCH
+078     @SCRATCH
+079     @SCRATCH
+07A     @SCRATCH
+086     lcdtris
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+0136  StrtoulGO
+0136  StrtolGO
+
+Project Directory:
+    D:\WORK\em_lab\project\
+
+Project Files:
+    main_module2.c                                          [10-มี.ค.-21 16:50  CRC=E7C5A0FC]
+    C:\Program Files (x86)\PICC\Devices\16F886.h            [21-ก.ค.-17 13:41  CRC=7107D019]
+    C:\Program Files (x86)\PICC\Drivers\stdio.h             [31-ก.ค.-07 15:24  CRC=4E4534F4]
+    C:\Program Files (x86)\PICC\Drivers\string.h            [26-มี.ค.-15 13:34  CRC=C4814297]
+    C:\Program Files (x86)\PICC\Drivers\stddef.h            [05-ก.ย.-14 12:47  CRC=897CEC6C]
+    C:\Program Files (x86)\PICC\Drivers\ctype.h             [03-ม.ค.-08 15:55  CRC=2D1F019F]
+    C:\Program Files (x86)\PICC\Drivers\stdlib.h            [29-มิ.ย.-16 10:34  CRC=7E9CC16B]
+    C:\Program Files (x86)\PICC\Drivers\lcd.c               [22-ก.พ.-16 10:05  CRC=D1A6378A]
+
+Source signature=4419072A
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=0000
+
+Units:
+    main_module2 (main)
+
+Compiler Settings:
+    Processor:      PIC16F886
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   main_module2.xsym
+    Errors:      main_module2.err
+    Ext Symbols: main_module2.esym
+    Symbols:     main_module2.sym

@@ -1,0 +1,143 @@
+#include <16F886.h>
+#device ADC=10 *=16
+ 
+#FUSES NOWDT                    //No Watch Dog Timer
+#FUSES PUT                      //Power Up Timer
+#FUSES NOMCLR                   //Master Clear pin not enabled
+#FUSES NOPROTECT                //Code not protected from reading
+#FUSES NOCPD                    //No EE protection
+#FUSES BROWNOUT                 //Brownout reset
+#FUSES IESO                     //Internal External Switch Over mode enabled
+#FUSES FCMEN                    //Fail-safe clock monitor enabled
+#FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O
+#FUSES NODEBUG                  //No Debug mode for ICD
+#FUSES NOWRT                    //Program memory not write protected
+#FUSES BORV40                   //Brownout reset at 4.0V
+#FUSES RESERVED                 //Used to set the reserved FUSE bits
+#FUSES INTRC_IO 
+ 
+#use delay(clock=8M)
+ 
+#use rs232(baud=9600,parity=N,xmit=PIN_C6,rcv=PIN_C7,bits=8)
+ 
+#define RUN_BUTTON   PIN_B7
+
+
+//var
+boolean coil1IsReady = true;
+boolean coil2IsReady = true;
+boolean coil3IsReady = true;
+
+
+int16 START_TIME = 65059;
+ 
+//Happy Birthday
+int16 arr[25] = {
+65059,65059,65111,65059,65179,65157,65059,65059,65111,65059,65218,65179,
+65059,65059,65306,65252,65179,65157,65111,
+65268,65268,65252,65179,65218,65179
+};
+int16 time[25] = {
+100,80,140,120,120,140,100,80,140,120,120,140,100,80,140,140,120,120,120,100,80,140,120,120,120
+};
+ 
+#INT_TIMER1
+void timer1_isr(){
+   set_timer1(START_TIME);
+   output_toggle(PIN_A0);
+}
+
+void coil_driver(int pin){
+   int feq = -1;
+   if (pin == 0) {
+      printf("C\n");
+      feq = 1043;
+   }
+   else if (pin == 1) { 
+      printf("DC\n");
+      feq = 1175;
+   }
+   else if (pin == 2) { 
+      printf("E\n");
+      feq = 1319;
+   }
+   else if (pin == 3) { 
+      printf("F\n");
+      feq = 1399;
+   }
+   else if (pin == 4) { 
+      printf("G\n");
+      feq = 1565;
+   }
+   else if (pin == 5) { 
+      printf("A\n");
+      feq = 1764;
+   }
+   else if (pin == 6) { 
+      printf("B\n");
+      feq = 1972;
+   }
+   else if (pin == 7) { 
+      printf("C_H\n");
+      feq = 2088;
+   }
+   else {
+      feq = -1;
+   }
+   coil_manager(feq);
+}
+
+void coil_manager(int feq){
+   if (feq = -1) {
+      coil1IsReady = true;
+      coil2IsReady = true;
+      coil3IsReady = true;
+   }
+   if (coil1IsReady) {
+      output_toggle(PIN_A0);
+      coil1IsReady = false;
+   }
+   else if (coil2IsReady) {
+      output_toggle(PIN_A1);
+      coil2IsReady = false;
+   }
+   else if (coil3IsReady) {
+      output_toggle(PIN_A2);
+      coil3IsReady = false;
+   }
+}
+
+void inputHandler () {
+      int pin = -1;
+      if (input(PIN_B0)) {
+         pin = 0;
+      }
+      else if (input(PIN_B1)) {
+         pin = 1;
+      }
+      else if (input(PIN_B2)) {
+         pin = 2;
+      }
+      else if (input(PIN_B3)) {
+         pin = 3;
+      }
+      else if (input(PIN_B4)) {
+         pin = 4;
+      }
+      else if (input(PIN_B5)) {
+         pin = 5;
+      }
+      else if (input(PIN_B6)) {
+         pin = 6;
+      }
+      else if (input(PIN_B7)) {
+         pin = 7;
+      }
+      coil_driver(pin);
+   }
+ 
+void main() {
+   While(1) {
+         inputHandler();
+   }
+}

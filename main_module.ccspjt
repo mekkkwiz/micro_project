@@ -1,0 +1,107 @@
+[PROJECT]
+Target=main_module.hex
+Processor_Text=PIC16F886
+CCSVersion=5.074
+Compiler=PCM
+[Target Data]
+FileList=main_module.c
+[main_module.c]
+Type=4
+[mru-list]
+1=main_module.c
+
+[defines]
+buildcount=20
+
+[Opened Files]
+1=main_module.c
+t1=45
+Count=5
+2=lcd.c
+t2=97
+3=lcd.h
+t3=1
+4=main_module2.c
+t4=74
+5=..\Tesla coil\lcd.c
+t5=74
+
+[ProjectLog]
+Days=5
+D1=25-02-2021
+D1_L=8
+D1_L1=[1848]Stopped Editing.
+D1_L2=[2651]Started Editing.
+D1_L3=[3142]Stopped Editing.
+D1_L4=[7164]Started Editing.
+D1_L5=[7671]Stopped Editing.
+D1_L6=[9590]Started Editing.
+D1_L7=[9890]Stopped Editing.
+TotalEdit=51
+TotalDebug=0
+D1_E=20
+D1_D=0
+D1_L8=[37598]Project Closed.
+D2=27-02-2021
+D2_L=5
+D2_L1=[14228]Project Opened.
+D2_L2=[14257]Started Editing.
+D2_L3=[16675]Stopped Editing.
+D2_L4=[41497]Started Editing.
+D2_L5=[41797]Stopped Editing.
+D3=08-03-2021
+D3_L=2
+D3_L1=[61143]Project Opened.
+D3_L2=[72016]Project Closed.
+D4=09-03-2021
+D4_L=4
+D4_L1=[81118]Project Opened.
+D4_L2=[83875]Started Editing.
+D4_L3=[84175]Stopped Editing.
+D4_E=1
+D4_D=0
+D4_L4=[85207]Project Closed.
+D5=10-03-2021
+D5_L=21
+D5_L1=[35]Project Opened.
+D5_L2=[3445]Project Closed.
+D5_L3=[56311]Project Opened.
+D5_L4=[56868]Started Editing.
+D5_L5=[57242]Stopped Editing.
+D5_L6=[57423]Started Editing.
+D5_L7=[57723]Stopped Editing.
+D5_L8=[58322]Started Editing.
+D5_L9=[58824]Stopped Editing.
+D5_L10=[58827]Started Editing.
+D5_L11=[59127]Stopped Editing.
+D5_L12=[59430]Started Editing.
+D5_L13=[60916]Stopped Editing.
+D5_L14=[61123]Started Editing.
+D5_L15=[61604]Stopped Editing.
+D5_L16=[61981]Started Editing.
+D5_L17=[62137]Stopped Editing.
+D5_E=30
+D5_D=0
+D5_L18=[62137]Project Closed.
+D5_L19=[73779]Project Opened.
+D5_L20=[74804]Started Editing.
+D5_L21=[75104]Stopped Editing.
+
+[fileformats]
+forcecoff=0
+
+[Documentation]
+1=D:\WORK\em_lab\project\main_module Notes.txt
+1T=main_module Notes.txt
+1E=
+1W=0
+Count=1
+
+[ExtraIncludes]
+Count=2
+1=main_module=d:\work\em_lab\project\main_module2.c
+2=main_module=d:\work\em_lab\project\lcd.c
+3=main_module=d:\work\em_lab\project\main_module2.c
+[Units]
+Count=1
+1=main_module (main)
