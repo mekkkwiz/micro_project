@@ -11,20 +11,20 @@ Type=4
 1=main_module.c
 
 [defines]
-buildcount=20
+buildcount=38
 
 [Opened Files]
 1=main_module.c
-t1=45
+t1=101
 Count=5
 2=lcd.c
-t2=97
+t2=86
 3=lcd.h
-t3=1
+t3=77
 4=main_module2.c
-t4=74
+t4=55
 5=..\Tesla coil\lcd.c
-t5=74
+t5=1
 
 [ProjectLog]
 Days=5
@@ -62,7 +62,7 @@ D4_E=1
 D4_D=0
 D4_L4=[85207]Project Closed.
 D5=10-03-2021
-D5_L=21
+D5_L=32
 D5_L1=[35]Project Opened.
 D5_L2=[3445]Project Closed.
 D5_L3=[56311]Project Opened.
@@ -86,6 +86,17 @@ D5_L18=[62137]Project Closed.
 D5_L19=[73779]Project Opened.
 D5_L20=[74804]Started Editing.
 D5_L21=[75104]Stopped Editing.
+D5_L22=[76457]Started Editing.
+D5_L23=[78984]Stopped Editing.
+D5_L24=[79103]Started Editing.
+D5_L25=[79562]Stopped Editing.
+D5_L26=[79764]Started Editing.
+D5_L27=[80467]Stopped Editing.
+D5_L28=[80607]Started Editing.
+D5_L29=[81278]Stopped Editing.
+D5_L30=[81279]Started Editing.
+D5_L31=[82528]Stopped Editing.
+D5_L32=[83094]Started Editing.
 
 [fileformats]
 forcecoff=0

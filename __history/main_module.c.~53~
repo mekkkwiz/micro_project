@@ -37,7 +37,7 @@
 #include <lcd.c>
 
 
-int16 START_TIME = 65059;
+long START_TIME = 65059;
 
 //Happy Birthday
 int16 arr[25] = {
@@ -70,7 +70,6 @@ int16 convertTimer(long f){
 
 void main()
 {
-   lcd_init();
    //initial code for setup timer for interrupt
    setup_timer_1(T1_INTERNAL | T1_DIV_BY_4);
    set_timer1(START_TIME);
@@ -79,105 +78,53 @@ void main()
    //-----------------------------------------------------//
    //var decaration
    int lastButton = -1;
-   long inputFeq = 500;
+   int inputFeq = 500;
    //-----------------------------------------------------//
-//!   long default_feq [6] = {1043, 1175, 1319, 1399, 1565, 1764};
-   int16 d_but1 = 65306;
-   int16 d_but2 = 65333;
-   int16 d_but3 = 65356;
-   int16 d_but4 = 65367;
-   int16 d_but5 = 65386;
-   int16 d_but6 = 65404  ;
-//!   long current_feq [6];
-   int16 c_but1 = d_but1;
-   int16 c_but2 = d_but2;
-   int16 c_but3 = d_but3;
-   int16 c_but4 = d_but4;
-   int16 c_but5 = d_but5;
-   int16 c_but6 = d_but6;
+   long default_feq [6] = {1043, 1175, 1319, 1399, 1565, 1764};
+   long current_feq [6];
    //copy arr from defalut -> current for initialize value
-//!   int loop;
-//!   for(loop = 0; loop < 10; loop++) {
-//!      current_feq[loop] = default_feq[loop];
-//!   }
+   int loop;
+   for(loop = 0; loop < 10; loop++) {
+      current_feq[loop] = default_feq[loop];
+   }
    //-----------------------------------------------------//
    boolean setIsPressed = input(PIN_B7);
    While(1){
-      lcd_gotoxy(4, 1);           // Go to column 4 row 1
-      lcd_putc("CURENT_FEQ");
-      lcd_gotoxy(5, 2);           // Go to column 7 row 2
-      printf(lcd_putc,"%lu",inputFeq);   // Write num with 5 numbers max
-      if (!input(PIN_C2)){//reset
-         inputFeq = 500;
-         lcd_putc('\f');
-      }
-      if (!input(PIN_B5)){//inc
-         if(inputFeq < 25000){
-            inputFeq++;
-         }
-         else {
-            inputFeq = 25000;
-         }
-      }
-      if (!input(PIN_B4)){//dec
-         if(inputFeq >500){
-            inputFeq--;
-         }
-         else {
-            inputFeq = 500;
-         }
-      }
-      lcd_gotoxy(12,2);
-      lcd_putc("Hz");
       if(setIsPressed){
-         switch(lastButton)
-         {
-         case 1: c_but1 = inputFeq; break;
-         case 2: c_but2 = inputFeq; break;
-         case 3: c_but3 = inputFeq; break;
-         case 4: c_but4 = inputFeq; break;
-         case 5: c_but5 = inputFeq; break;
-         case 6: c_but6 = inputFeq; break;
-         }
-//!         current_feq[lastButton-1] = inputFeq;
+         current_feq[lastButton-1] = inputFeq;
       }
       if(!input(PIN_B3)){
          lastButton = 1;
-         printf("1 pressed\n");
-         START_TIME  = c_but1;
+         printf("1 pressed cur = %lu\n",current_feq[1-1]);
+         START_TIME  = 65306;
 //!         START_TIME  = convertTimer(current_feq[1-1]);
          enable_interrupts(INT_TIMER1);
          printf("START_TIME = %lu\n",START_TIME);
       }
       else if(!input(PIN_B2)){
          lastButton = 2;
-         START_TIME  = c_but2;
+         START_TIME  = 65333;
 //!         START_TIME  = convertTimer(current_feq[2-1]);
          enable_interrupts(INT_TIMER1);
-         printf("2 pressed\n");
+         printf("2 pressed cur = %lu\n",current_feq[2-1]);
          printf("START_TIME = %lu\n",START_TIME);
       }
       else if(input(PIN_B1)){
          lastButton = 3;
-         START_TIME  = c_but3;
-         enable_interrupts(INT_TIMER1);
+         START_TIME  = convertTimer(current_feq[3-1]);
       }
       else if(input(PIN_B0)){
          lastButton = 4;
-         START_TIME  = c_but4;
-         enable_interrupts(INT_TIMER1);
+         START_TIME  = convertTimer(current_feq[4-1]);
       }
       else if(input(PIN_C5)){
          lastButton = 5;
-         START_TIME  = c_but5;
-         enable_interrupts(INT_TIMER1);
+         START_TIME  = convertTimer(current_feq[5-1]);
       }
       else if(input(PIN_C4)){
          lastButton = 6;
-         START_TIME  = c_but6;
-         enable_interrupts(INT_TIMER1);
+         START_TIME  = convertTimer(current_feq[6-1]);
       }
       
    }  
 }
-

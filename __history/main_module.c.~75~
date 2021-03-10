@@ -127,8 +127,6 @@ void main()
             inputFeq = 500;
          }
       }
-      lcd_gotoxy(12,2);
-      lcd_putc("Hz");
       if(setIsPressed){
          switch(lastButton)
          {

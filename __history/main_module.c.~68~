@@ -70,7 +70,6 @@ int16 convertTimer(long f){
 
 void main()
 {
-   lcd_init();
    //initial code for setup timer for interrupt
    setup_timer_1(T1_INTERNAL | T1_DIV_BY_4);
    set_timer1(START_TIME);
@@ -103,32 +102,15 @@ void main()
    //-----------------------------------------------------//
    boolean setIsPressed = input(PIN_B7);
    While(1){
-      lcd_gotoxy(4, 1);           // Go to column 4 row 1
-      lcd_putc("CURENT_FEQ");
-      lcd_gotoxy(5, 2);           // Go to column 7 row 2
-      printf(lcd_putc,"%lu",inputFeq);   // Write num with 5 numbers max
       if (!input(PIN_C2)){//reset
          inputFeq = 500;
-         lcd_putc('\f');
       }
       if (!input(PIN_B5)){//inc
-         if(inputFeq < 25000){
-            inputFeq++;
-         }
-         else {
-            inputFeq = 25000;
-         }
+         inputFeq++;
       }
       if (!input(PIN_B4)){//dec
-         if(inputFeq >500){
-            inputFeq--;
-         }
-         else {
-            inputFeq = 500;
-         }
+         inputFeq--;
       }
-      lcd_gotoxy(12,2);
-      lcd_putc("Hz");
       if(setIsPressed){
          switch(lastButton)
          {
@@ -180,4 +162,3 @@ void main()
       
    }  
 }
-

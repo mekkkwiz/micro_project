@@ -109,7 +109,6 @@ void main()
       printf(lcd_putc,"%lu",inputFeq);   // Write num with 5 numbers max
       if (!input(PIN_C2)){//reset
          inputFeq = 500;
-         lcd_putc('\f');
       }
       if (!input(PIN_B5)){//inc
          if(inputFeq < 25000){
@@ -127,8 +126,6 @@ void main()
             inputFeq = 500;
          }
       }
-      lcd_gotoxy(12,2);
-      lcd_putc("Hz");
       if(setIsPressed){
          switch(lastButton)
          {

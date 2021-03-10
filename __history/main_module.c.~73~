@@ -106,10 +106,9 @@ void main()
       lcd_gotoxy(4, 1);           // Go to column 4 row 1
       lcd_putc("CURENT_FEQ");
       lcd_gotoxy(5, 2);           // Go to column 7 row 2
-      printf(lcd_putc,"%lu",inputFeq);   // Write num with 5 numbers max
+      printf(lcd_putc,"%lu",num);   // Write num with 5 numbers max
       if (!input(PIN_C2)){//reset
          inputFeq = 500;
-         lcd_putc('\f');
       }
       if (!input(PIN_B5)){//inc
          if(inputFeq < 25000){
@@ -127,8 +126,6 @@ void main()
             inputFeq = 500;
          }
       }
-      lcd_gotoxy(12,2);
-      lcd_putc("Hz");
       if(setIsPressed){
          switch(lastButton)
          {

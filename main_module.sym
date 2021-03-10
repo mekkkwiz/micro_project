@@ -1,9 +1,9 @@
 004-005 @WRITE_PROGRAM_MEMORY8.P1
 004-005 @READ_PROGRAM_MEMORY8.P2
-006     lcd
 006     lcdlat
-015     CCP_1_LOW
+006     lcd
 015     CCP_1
+015     CCP_1_LOW
 016     CCP_1_HIGH
 01B     CCP_2_LOW
 01B     CCP_2
@@ -23,8 +23,8 @@
 02D-030 _Randseed
 031-032 START_TIME
 033-064 arr
-065     @TRIS_C
-066-067 @sprintf_string
+065-066 @sprintf_string
+067     @TRIS_C
 077     @SCRATCH
 078     @SCRATCH
 078     _RETURN_
@@ -33,42 +33,71 @@
 07F     @INTERRUPT_AREA
 086     lcdtris
 0A0-0D1 time
-0D2     MAIN.i
-0D3     MAIN.c
-0D4     MAIN.song_on
-0D5     MAIN.ax
-0D6     MAIN.bx
-0D7     lcd_init.i
-0D7     @DIV88.P1
-0D7     MAIN.@SCRATCH1
-0D7     @PSTRINGC7_897.@SCRATCH1
-0D8     @DIV88.P1
-0D8-0DB lcd_init.LCD_INIT_STRING
-0D8     MAIN.@SCRATCH2
-0D8     @PSTRINGC7_897.@SCRATCH2
-0D9     MAIN.@SCRATCH3
-0D9     @PSTRINGC7_897.@SCRATCH3
-0D9     @DIV88.@SCRATCH1
-0DA     lcd_putc.c
-0DA     @PSTRINGC7_897.@SCRATCH4
-0DB     lcd_gotoxy.x
-0DC     lcd_gotoxy.y
-0DC     @delay_ms1.P1
-0DC     lcd_init.@SCRATCH1
-0DD     lcd_gotoxy.address
-0DE     lcd_gotoxy.@SCRATCH1
-0DF     lcd_send_byte.address
-0E0     lcd_send_byte.n
-0E1     lcd_read_byte.low
-0E1     lcd_send_byte.@SCRATCH1
-0E2     lcd_read_byte.high
-0E2     lcd_send_nibble.n
-0E3     lcd_read_byte.@SCRATCH1
+0D2     MAIN.lastButton
+0D3-0D4 MAIN.inputFeq
+0D5-0D6 MAIN.d_but1
+0D7-0D8 MAIN.d_but2
+0D9-0DA MAIN.d_but3
+0DB-0DC MAIN.d_but4
+0DD-0DE MAIN.d_but5
+0DF-0E0 MAIN.d_but6
+0E1-0E2 MAIN.c_but1
+0E3-0E4 MAIN.c_but2
+0E5-0E6 MAIN.c_but3
+0E7-0E8 MAIN.c_but4
+0E9-0EA MAIN.c_but5
+0EB-0EC MAIN.c_but6
+0ED.0   MAIN.setIsPressed
+0EE-0EF @PRINTF_LU_9600_62_63.P1
+0EE     lcd_init.i
+0EE     @PSTRINGCN7_9600_62_63.P1
+0EE-0EF @PRINTF_LU_897.P2
+0EF     lcd_init.@SCRATCH1
 0FF     @INTERRUPT_AREA
 107.6   C1OUT
 108.6   C2OUT
-10D-10E @WRITE_PROGRAM_MEMORY8.P1
-10D-10E @READ_PROGRAM_MEMORY8.P2
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+110-113 lcd_init.LCD_INIT_STRING
+110     @PRINTF_LU_897.@SCRATCH1
+110     @PSTRINGC7_897.@SCRATCH1
+110     @PSTRINGC7_9600_62_63.@SCRATCH1
+110     @PSTRINGCN7_9600_62_63.@SCRATCH1
+110     @PRINTF_LU_9600_62_63.@SCRATCH1
+111     @PRINTF_LU_897.@SCRATCH2
+111     @PSTRINGC7_897.@SCRATCH2
+111     @PSTRINGC7_9600_62_63.@SCRATCH2
+111     @PSTRINGCN7_9600_62_63.@SCRATCH2
+111     @PRINTF_LU_9600_62_63.@SCRATCH2
+112     @PRINTF_LU_897.@SCRATCH3
+112     @PSTRINGC7_897.@SCRATCH3
+112     @PSTRINGC7_9600_62_63.@SCRATCH3
+112     @PSTRINGCN7_9600_62_63.@SCRATCH3
+112     @PRINTF_LU_9600_62_63.@SCRATCH3
+113     @PRINTF_LU_897.@SCRATCH4
+113     @PSTRINGC7_897.@SCRATCH4
+113     @PSTRINGC7_9600_62_63.@SCRATCH4
+113     @PSTRINGCN7_9600_62_63.@SCRATCH4
+113     @PRINTF_LU_9600_62_63.@SCRATCH4
+114     @PRINTF_LU_897.@SCRATCH5
+114     @PRINTF_LU_9600_62_63.@SCRATCH5
+115     @PRINTF_LU_897.@SCRATCH6
+115     @PRINTF_LU_9600_62_63.@SCRATCH6
+116     @PRINTF_LU_897.@SCRATCH7
+116     @PRINTF_LU_9600_62_63.@SCRATCH7
+117     lcd_putc.c
+118     lcd_gotoxy.x
+118     @delay_ms1.P1
+119     lcd_gotoxy.y
+11A     lcd_gotoxy.address
+11B     lcd_gotoxy.@SCRATCH1
+11C     lcd_send_byte.address
+11D     lcd_send_byte.n
+11E     lcd_read_byte.low
+11E     lcd_send_byte.@SCRATCH1
+11F     lcd_read_byte.high
+11F     lcd_send_nibble.n
+120     lcd_read_byte.@SCRATCH1
 17F     @INTERRUPT_AREA
 1FF     @INTERRUPT_AREA
 27F     @INTERRUPT_AREA
@@ -134,20 +163,30 @@ FFF     @INTERRUPT_AREA
 
 ROM Allocation:
 000051  timer1_isr
-00005F  @const922.call
-000064  @delay_ms1
-000078  lcd_send_nibble
-000087  lcd_read_nibble
-00008D  lcd_send_byte
-000093  lcd_read_byte
-0000DD  lcd_init
-000129  lcd_gotoxy
-00013D  lcd_putc
-000177  @PSTRINGC7_897
-0001ED  @DIV88
-000204  MAIN
-000204  @cinit1
-00022D  @cinit2
+00005F  @const918.call
+000061  @const946.call
+000067  @const949.call
+000069  @const951.call
+00006F  @const953.call
+000078  @const958.call
+00007E  @const959.call
+000087  @delay_ms1
+00009B  lcd_send_nibble
+0000AA  lcd_read_nibble
+0000B0  lcd_send_byte
+0000B6  lcd_read_byte
+000102  lcd_init
+00015A  lcd_gotoxy
+00016E  lcd_putc
+0001A8  @PSTRINGC7_897
+0001F8  @PRINTF_LU_897
+000277  @PSTRINGC7_9600_62_63
+0002C9  @PSTRINGCN7_9600_62_63
+000329  @PRINTF_LU_9600_62_63
+000396  MAIN
+000396  @cinit1
+0003BF  @cinit2
+000617  @goto22041
 0136  StrtoulGO
 0136  StrtolGO
 
@@ -155,7 +194,7 @@ Project Directory:
     D:\WORK\em_lab\project\
 
 Project Files:
-    main_module.c                                           [10-มี.ค.-21 16:39  CRC=67139697]
+    main_module.c                                           [10-มี.ค.-21 23:26  CRC=60343B33]
     C:\Program Files (x86)\PICC\Devices\16F886.h            [21-ก.ค.-17 13:41  CRC=7107D019]
     C:\Program Files (x86)\PICC\Drivers\stdio.h             [31-ก.ค.-07 15:24  CRC=4E4534F4]
     C:\Program Files (x86)\PICC\Drivers\string.h            [26-มี.ค.-15 13:34  CRC=C4814297]
@@ -164,10 +203,10 @@ Project Files:
     C:\Program Files (x86)\PICC\Drivers\stdlib.h            [29-มิ.ย.-16 10:34  CRC=7E9CC16B]
     C:\Program Files (x86)\PICC\Drivers\lcd.c               [22-ก.พ.-16 10:05  CRC=D1A6378A]
 
-Source signature=C366FCC5
+Source signature=BC87A161
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=D6B3
+Hex file CRC=E120
 
 Units:
     main_module (main)
