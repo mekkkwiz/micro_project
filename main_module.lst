@@ -1,8 +1,8 @@
-CCS PCM C Compiler, Version 5.074, 32906               11-มี.ค.-21 22:44
+CCS PCM C Compiler, Version 5.074, 32906               11-มี.ค.-21 23:17
 
                Filename:   D:\WORK\em_lab\micro_project\main_module.lst
 
-               ROM used:   2505 words (31%)
+               ROM used:   2535 words (31%)
                            Largest free fragment is 2048
                RAM used:   67 (18%) at main() level
                            88 (24%) worst case
@@ -673,16 +673,16 @@ CCS PCM C Compiler, Version 5.074, 32906               11-มี.ค.-21 22:44
 03AA:  MOVF   6D,W
 03AB:  MOVWF  00
 *
-0DF3:  BSF    0A.0
-0DF4:  BCF    0A.1
-0DF5:  BSF    0A.2
-0DF6:  ADDWF  02,F
-0DF7:  GOTO   494
-0DF8:  GOTO   4AF
-0DF9:  GOTO   4CA
-0DFA:  GOTO   4E5
-0DFB:  GOTO   500
-0DFC:  GOTO   51B
+0E11:  BCF    0A.0
+0E12:  BSF    0A.1
+0E13:  BSF    0A.2
+0E14:  ADDWF  02,F
+0E15:  GOTO   496
+0E16:  GOTO   4B1
+0E17:  GOTO   4CC
+0E18:  GOTO   4E7
+0E19:  GOTO   502
+0E1A:  GOTO   51D
 ....................  
 .................... #list 
 ....................  
@@ -4631,7 +4631,7 @@ CCS PCM C Compiler, Version 5.074, 32906               11-มี.ค.-21 22:44
 08D8:  XORLW  73
 08D9:  BTFSC  03.2
 08DA:  GOTO   3EB
-08DB:  GOTO   427
+08DB:  GOTO   429
 ....................             case 1:  lcd_putc('\f'); 
 08DC:  MOVLW  0C
 08DD:  MOVWF  69
@@ -4696,7 +4696,7 @@ CCS PCM C Compiler, Version 5.074, 32906               11-มี.ค.-21 22:44
 0911:  MOVLW  FF
 0912:  MOVWF  39
 ....................                      break; 
-0913:  GOTO   427
+0913:  GOTO   429
 ....................             case 2:  lcd_putc('\f'); 
 0914:  MOVLW  0C
 0915:  MOVWF  69
@@ -4769,7 +4769,7 @@ CCS PCM C Compiler, Version 5.074, 32906               11-มี.ค.-21 22:44
 0950:  CALL   2D3
 0951:  BSF    0A.3
 ....................                      break; 
-0952:  GOTO   427
+0952:  GOTO   429
 ....................             case 3:  lcd_putc('\f'); 
 0953:  MOVLW  0C
 0954:  MOVWF  69
@@ -4834,7 +4834,7 @@ CCS PCM C Compiler, Version 5.074, 32906               11-มี.ค.-21 22:44
 0988:  MOVLW  FF
 0989:  MOVWF  39
 ....................                      break; 
-098A:  GOTO   427
+098A:  GOTO   429
 ....................             case 4:  lcd_putc('\f'); 
 098B:  MOVLW  0C
 098C:  MOVWF  69
@@ -4899,7 +4899,7 @@ CCS PCM C Compiler, Version 5.074, 32906               11-มี.ค.-21 22:44
 09C0:  MOVLW  FF
 09C1:  MOVWF  39
 ....................                      break; 
-09C2:  GOTO   427
+09C2:  GOTO   429
 ....................             case 5:  lcd_putc('\f'); 
 09C3:  MOVLW  0C
 09C4:  MOVWF  69
@@ -4964,7 +4964,7 @@ CCS PCM C Compiler, Version 5.074, 32906               11-มี.ค.-21 22:44
 09F8:  MOVLW  FF
 09F9:  MOVWF  39
 ....................                      break; 
-09FA:  GOTO   427
+09FA:  GOTO   429
 ....................             case 6:  lcd_putc('\f'); 
 09FB:  MOVLW  0C
 09FC:  MOVWF  69
@@ -5029,7 +5029,7 @@ CCS PCM C Compiler, Version 5.074, 32906               11-มี.ค.-21 22:44
 0A30:  MOVLW  FF
 0A31:  MOVWF  39
 ....................                      break; 
-0A32:  GOTO   427
+0A32:  GOTO   429
 ....................             case 7:  lcd_putc('\f'); 
 0A33:  MOVLW  0C
 0A34:  MOVWF  69
@@ -5157,7 +5157,7 @@ CCS PCM C Compiler, Version 5.074, 32906               11-มี.ค.-21 22:44
 0A98:  MOVLW  FF
 0A99:  MOVWF  39
 ....................                      break; 
-0A9A:  GOTO   427
+0A9A:  GOTO   429
 ....................             case 11: lcd_putc('\f'); 
 0A9B:  MOVLW  0C
 0A9C:  MOVWF  69
@@ -5222,7 +5222,7 @@ CCS PCM C Compiler, Version 5.074, 32906               11-มี.ค.-21 22:44
 0AD0:  MOVLW  FF
 0AD1:  MOVWF  39
 ....................                      break; 
-0AD2:  GOTO   427
+0AD2:  GOTO   429
 ....................             case 12: lcd_putc('\f'); 
 0AD3:  MOVLW  0C
 0AD4:  MOVWF  69
@@ -5287,7 +5287,7 @@ CCS PCM C Compiler, Version 5.074, 32906               11-มี.ค.-21 22:44
 0B08:  MOVLW  FF
 0B09:  MOVWF  39
 ....................                      break; 
-0B0A:  GOTO   427
+0B0A:  GOTO   429
 ....................             case 13: lcd_putc('\f'); 
 0B0B:  MOVLW  0C
 0B0C:  MOVWF  69
@@ -5352,7 +5352,7 @@ CCS PCM C Compiler, Version 5.074, 32906               11-มี.ค.-21 22:44
 0B40:  MOVLW  FF
 0B41:  MOVWF  39
 ....................                      break; 
-0B42:  GOTO   427
+0B42:  GOTO   429
 ....................             case 14: lcd_putc('\f'); 
 0B43:  MOVLW  0C
 0B44:  MOVWF  69
@@ -5417,7 +5417,7 @@ CCS PCM C Compiler, Version 5.074, 32906               11-มี.ค.-21 22:44
 0B78:  MOVLW  FF
 0B79:  MOVWF  39
 ....................                      break; 
-0B7A:  GOTO   427
+0B7A:  GOTO   429
 ....................             case 15: lcd_putc('\f'); 
 0B7B:  MOVLW  0C
 0B7C:  MOVWF  69
@@ -5482,7 +5482,7 @@ CCS PCM C Compiler, Version 5.074, 32906               11-มี.ค.-21 22:44
 0BB0:  MOVLW  FF
 0BB1:  MOVWF  39
 ....................                      break; 
-0BB2:  GOTO   427
+0BB2:  GOTO   429
 ....................             case 16: lcd_putc('\f'); 
 0BB3:  MOVLW  0C
 0BB4:  MOVWF  69
@@ -5547,7 +5547,7 @@ CCS PCM C Compiler, Version 5.074, 32906               11-มี.ค.-21 22:44
 0BE8:  MOVLW  FF
 0BE9:  MOVWF  39
 ....................                      break; 
-0BEA:  GOTO   427
+0BEA:  GOTO   429
 ....................             case 99: lcd_putc('\f'); 
 0BEB:  MOVLW  0C
 0BEC:  MOVWF  69
@@ -5612,588 +5612,628 @@ CCS PCM C Compiler, Version 5.074, 32906               11-มี.ค.-21 22:44
 0C20:  MOVLW  FF
 0C21:  MOVWF  39
 ....................                      break; 
-0C22:  GOTO   427
-....................             defalut : disable_interrupts(INT_TIMER1); break; 
+0C22:  GOTO   429
+....................             defalut: disable_interrupts(INT_TIMER1); 
 0C23:  BSF    03.5
 0C24:  BCF    0C.0
-0C25:  BCF    03.5
-0C26:  GOTO   427
+....................                      output_low(PIN_A7); 
+0C25:  BCF    05.7
+0C26:  BCF    03.5
+0C27:  BCF    05.7
+....................                      break; 
+0C28:  GOTO   429
+....................                       
 ....................                       
 ....................          } 
 ....................       if (!input(PIN_C2)){//reset 
-0C27:  BSF    35.2
-0C28:  MOVF   35,W
-0C29:  BSF    03.5
-0C2A:  MOVWF  07
-0C2B:  BCF    03.5
-0C2C:  BTFSC  07.2
-0C2D:  GOTO   442
+0C29:  BSF    35.2
+0C2A:  MOVF   35,W
+0C2B:  BSF    03.5
+0C2C:  MOVWF  07
+0C2D:  BCF    03.5
+0C2E:  BTFSC  07.2
+0C2F:  GOTO   444
 ....................          inputFeq = 500; 
-0C2E:  MOVLW  01
-0C2F:  MOVWF  38
-0C30:  MOVLW  F4
-0C31:  MOVWF  37
+0C30:  MOVLW  01
+0C31:  MOVWF  38
+0C32:  MOVLW  F4
+0C33:  MOVWF  37
 ....................          lcd_putc('\f'); 
-0C32:  MOVLW  0C
-0C33:  MOVWF  69
-0C34:  BCF    0A.3
-0C35:  CALL   1EE
-0C36:  BSF    0A.3
+0C34:  MOVLW  0C
+0C35:  MOVWF  69
+0C36:  BCF    0A.3
+0C37:  CALL   1EE
+0C38:  BSF    0A.3
 ....................          fakePointer = 7; 
-0C37:  MOVLW  07
-0C38:  MOVWF  39
+0C39:  MOVLW  07
+0C3A:  MOVWF  39
 ....................          printf("reset pressed\n"); 
-0C39:  MOVLW  D1
-0C3A:  BSF    03.6
-0C3B:  MOVWF  0D
-0C3C:  MOVLW  00
-0C3D:  MOVWF  0F
-0C3E:  BCF    0A.3
-0C3F:  BCF    03.6
-0C40:  CALL   2EC
-0C41:  BSF    0A.3
+0C3B:  MOVLW  D1
+0C3C:  BSF    03.6
+0C3D:  MOVWF  0D
+0C3E:  MOVLW  00
+0C3F:  MOVWF  0F
+0C40:  BCF    0A.3
+0C41:  BCF    03.6
+0C42:  CALL   2EC
+0C43:  BSF    0A.3
 ....................           
 ....................       } 
 ....................       if (!input(PIN_B5)){//inc 
-0C42:  BSF    03.5
-0C43:  BSF    06.5
-0C44:  BCF    03.5
-0C45:  BTFSC  06.5
-0C46:  GOTO   464
+0C44:  BSF    03.5
+0C45:  BSF    06.5
+0C46:  BCF    03.5
+0C47:  BTFSC  06.5
+0C48:  GOTO   466
 ....................          if(inputFeq < 25000){ 
-0C47:  MOVF   38,W
-0C48:  SUBLW  61
-0C49:  BTFSS  03.0
-0C4A:  GOTO   455
-0C4B:  BTFSS  03.2
-0C4C:  GOTO   451
-0C4D:  MOVF   37,W
-0C4E:  SUBLW  A7
-0C4F:  BTFSS  03.0
-0C50:  GOTO   455
+0C49:  MOVF   38,W
+0C4A:  SUBLW  61
+0C4B:  BTFSS  03.0
+0C4C:  GOTO   457
+0C4D:  BTFSS  03.2
+0C4E:  GOTO   453
+0C4F:  MOVF   37,W
+0C50:  SUBLW  A7
+0C51:  BTFSS  03.0
+0C52:  GOTO   457
 ....................             inputFeq++; 
-0C51:  INCF   37,F
-0C52:  BTFSC  03.2
-0C53:  INCF   38,F
+0C53:  INCF   37,F
+0C54:  BTFSC  03.2
+0C55:  INCF   38,F
 ....................          } 
-0C54:  GOTO   459
+0C56:  GOTO   45B
 ....................          else { 
 ....................             inputFeq = 25000; 
-0C55:  MOVLW  61
-0C56:  MOVWF  38
-0C57:  MOVLW  A8
-0C58:  MOVWF  37
+0C57:  MOVLW  61
+0C58:  MOVWF  38
+0C59:  MOVLW  A8
+0C5A:  MOVWF  37
 ....................              
 ....................          } 
 ....................          fakePointer = 99; 
-0C59:  MOVLW  63
-0C5A:  MOVWF  39
+0C5B:  MOVLW  63
+0C5C:  MOVWF  39
 ....................          printf("inc pressed\n"); 
-0C5B:  MOVLW  D9
-0C5C:  BSF    03.6
-0C5D:  MOVWF  0D
-0C5E:  MOVLW  00
-0C5F:  MOVWF  0F
-0C60:  BCF    0A.3
-0C61:  BCF    03.6
-0C62:  CALL   2EC
-0C63:  BSF    0A.3
+0C5D:  MOVLW  D9
+0C5E:  BSF    03.6
+0C5F:  MOVWF  0D
+0C60:  MOVLW  00
+0C61:  MOVWF  0F
+0C62:  BCF    0A.3
+0C63:  BCF    03.6
+0C64:  CALL   2EC
+0C65:  BSF    0A.3
 ....................       } 
 ....................       if (!input(PIN_B4)){//dec 
-0C64:  BSF    03.5
-0C65:  BSF    06.4
-0C66:  BCF    03.5
-0C67:  BTFSC  06.4
-0C68:  GOTO   488
+0C66:  BSF    03.5
+0C67:  BSF    06.4
+0C68:  BCF    03.5
+0C69:  BTFSC  06.4
+0C6A:  GOTO   48A
 ....................          if(inputFeq >500){ 
-0C69:  MOVF   38,W
-0C6A:  SUBLW  00
-0C6B:  BTFSC  03.0
-0C6C:  GOTO   479
-0C6D:  XORLW  FF
-0C6E:  BTFSS  03.2
-0C6F:  GOTO   474
-0C70:  MOVF   37,W
-0C71:  SUBLW  F4
-0C72:  BTFSC  03.0
-0C73:  GOTO   479
+0C6B:  MOVF   38,W
+0C6C:  SUBLW  00
+0C6D:  BTFSC  03.0
+0C6E:  GOTO   47B
+0C6F:  XORLW  FF
+0C70:  BTFSS  03.2
+0C71:  GOTO   476
+0C72:  MOVF   37,W
+0C73:  SUBLW  F4
+0C74:  BTFSC  03.0
+0C75:  GOTO   47B
 ....................             inputFeq--; 
-0C74:  MOVF   37,W
-0C75:  BTFSC  03.2
-0C76:  DECF   38,F
-0C77:  DECF   37,F
+0C76:  MOVF   37,W
+0C77:  BTFSC  03.2
+0C78:  DECF   38,F
+0C79:  DECF   37,F
 ....................          } 
-0C78:  GOTO   47D
+0C7A:  GOTO   47F
 ....................          else { 
 ....................             inputFeq = 500; 
-0C79:  MOVLW  01
-0C7A:  MOVWF  38
-0C7B:  MOVLW  F4
-0C7C:  MOVWF  37
+0C7B:  MOVLW  01
+0C7C:  MOVWF  38
+0C7D:  MOVLW  F4
+0C7E:  MOVWF  37
 ....................          } 
 ....................          fakePointer = 99; 
-0C7D:  MOVLW  63
-0C7E:  MOVWF  39
+0C7F:  MOVLW  63
+0C80:  MOVWF  39
 ....................          printf("dec pressed\n"); 
-0C7F:  MOVLW  E0
-0C80:  BSF    03.6
-0C81:  MOVWF  0D
-0C82:  MOVLW  00
-0C83:  MOVWF  0F
-0C84:  BCF    0A.3
-0C85:  BCF    03.6
-0C86:  CALL   2EC
-0C87:  BSF    0A.3
+0C81:  MOVLW  E0
+0C82:  BSF    03.6
+0C83:  MOVWF  0D
+0C84:  MOVLW  00
+0C85:  MOVWF  0F
+0C86:  BCF    0A.3
+0C87:  BCF    03.6
+0C88:  CALL   2EC
+0C89:  BSF    0A.3
 ....................       } 
 ....................  
 ....................       if(!input(PIN_B7)){ 
-0C88:  BSF    03.5
-0C89:  BSF    06.7
-0C8A:  BCF    03.5
-0C8B:  BTFSC  06.7
-0C8C:  GOTO   536
+0C8A:  BSF    03.5
+0C8B:  BSF    06.7
+0C8C:  BCF    03.5
+0C8D:  BTFSC  06.7
+0C8E:  GOTO   538
 ....................          switch(lastButton) 
-0C8D:  MOVLW  01
-0C8E:  SUBWF  36,W
-0C8F:  ADDLW  FA
-0C90:  BTFSC  03.0
-0C91:  GOTO   536
-0C92:  ADDLW  06
-0C93:  GOTO   5F3
+0C8F:  MOVLW  01
+0C90:  SUBWF  36,W
+0C91:  ADDLW  FA
+0C92:  BTFSC  03.0
+0C93:  GOTO   538
+0C94:  ADDLW  06
+0C95:  GOTO   611
 ....................          { 
 ....................          case 1:  c_but1 = convertTimer(inputFeq); 
-0C94:  MOVF   38,W
-0C95:  MOVWF  5F
-0C96:  MOVF   37,W
-0C97:  MOVWF  5E
-0C98:  BCF    0A.3
-0C99:  CALL   344
-0C9A:  BSF    0A.3
-0C9B:  MOVF   79,W
-0C9C:  MOVWF  47
-0C9D:  MOVF   78,W
-0C9E:  MOVWF  46
+0C96:  MOVF   38,W
+0C97:  MOVWF  5F
+0C98:  MOVF   37,W
+0C99:  MOVWF  5E
+0C9A:  BCF    0A.3
+0C9B:  CALL   344
+0C9C:  BSF    0A.3
+0C9D:  MOVF   79,W
+0C9E:  MOVWF  47
+0C9F:  MOVF   78,W
+0CA0:  MOVWF  46
 ....................                   c_feq_but1 = inputFeq; 
-0C9F:  MOVF   38,W
-0CA0:  MOVWF  53
-0CA1:  MOVF   37,W
-0CA2:  MOVWF  52
+0CA1:  MOVF   38,W
+0CA2:  MOVWF  53
+0CA3:  MOVF   37,W
+0CA4:  MOVWF  52
 ....................                   fakePointer = 11; 
-0CA3:  MOVLW  0B
-0CA4:  MOVWF  39
+0CA5:  MOVLW  0B
+0CA6:  MOVWF  39
 ....................                   printf("set pressed\n"); 
-0CA5:  MOVLW  E7
-0CA6:  BSF    03.6
-0CA7:  MOVWF  0D
-0CA8:  MOVLW  00
-0CA9:  MOVWF  0F
-0CAA:  BCF    0A.3
-0CAB:  BCF    03.6
-0CAC:  CALL   2EC
-0CAD:  BSF    0A.3
+0CA7:  MOVLW  E7
+0CA8:  BSF    03.6
+0CA9:  MOVWF  0D
+0CAA:  MOVLW  00
+0CAB:  MOVWF  0F
+0CAC:  BCF    0A.3
+0CAD:  BCF    03.6
+0CAE:  CALL   2EC
+0CAF:  BSF    0A.3
 ....................                   break; 
-0CAE:  GOTO   536
+0CB0:  GOTO   538
 ....................          case 2:  c_but2 = convertTimer(inputFeq); 
-0CAF:  MOVF   38,W
-0CB0:  MOVWF  5F
-0CB1:  MOVF   37,W
-0CB2:  MOVWF  5E
-0CB3:  BCF    0A.3
-0CB4:  CALL   344
-0CB5:  BSF    0A.3
-0CB6:  MOVF   79,W
-0CB7:  MOVWF  49
-0CB8:  MOVF   78,W
-0CB9:  MOVWF  48
+0CB1:  MOVF   38,W
+0CB2:  MOVWF  5F
+0CB3:  MOVF   37,W
+0CB4:  MOVWF  5E
+0CB5:  BCF    0A.3
+0CB6:  CALL   344
+0CB7:  BSF    0A.3
+0CB8:  MOVF   79,W
+0CB9:  MOVWF  49
+0CBA:  MOVF   78,W
+0CBB:  MOVWF  48
 ....................                   c_feq_but2 = inputFeq;  
-0CBA:  MOVF   38,W
-0CBB:  MOVWF  55
-0CBC:  MOVF   37,W
-0CBD:  MOVWF  54
+0CBC:  MOVF   38,W
+0CBD:  MOVWF  55
+0CBE:  MOVF   37,W
+0CBF:  MOVWF  54
 ....................                   fakePointer = 12;  
-0CBE:  MOVLW  0C
-0CBF:  MOVWF  39
+0CC0:  MOVLW  0C
+0CC1:  MOVWF  39
 ....................                   printf("set pressed\n"); 
-0CC0:  MOVLW  EE
-0CC1:  BSF    03.6
-0CC2:  MOVWF  0D
-0CC3:  MOVLW  00
-0CC4:  MOVWF  0F
-0CC5:  BCF    0A.3
-0CC6:  BCF    03.6
-0CC7:  CALL   2EC
-0CC8:  BSF    0A.3
+0CC2:  MOVLW  EE
+0CC3:  BSF    03.6
+0CC4:  MOVWF  0D
+0CC5:  MOVLW  00
+0CC6:  MOVWF  0F
+0CC7:  BCF    0A.3
+0CC8:  BCF    03.6
+0CC9:  CALL   2EC
+0CCA:  BSF    0A.3
 ....................                   break; 
-0CC9:  GOTO   536
+0CCB:  GOTO   538
 ....................          case 3:  c_but1 = convertTimer(inputFeq); 
-0CCA:  MOVF   38,W
-0CCB:  MOVWF  5F
-0CCC:  MOVF   37,W
-0CCD:  MOVWF  5E
-0CCE:  BCF    0A.3
-0CCF:  CALL   344
-0CD0:  BSF    0A.3
-0CD1:  MOVF   79,W
-0CD2:  MOVWF  47
-0CD3:  MOVF   78,W
-0CD4:  MOVWF  46
+0CCC:  MOVF   38,W
+0CCD:  MOVWF  5F
+0CCE:  MOVF   37,W
+0CCF:  MOVWF  5E
+0CD0:  BCF    0A.3
+0CD1:  CALL   344
+0CD2:  BSF    0A.3
+0CD3:  MOVF   79,W
+0CD4:  MOVWF  47
+0CD5:  MOVF   78,W
+0CD6:  MOVWF  46
 ....................                   c_feq_but3 = inputFeq;  
-0CD5:  MOVF   38,W
-0CD6:  MOVWF  57
-0CD7:  MOVF   37,W
-0CD8:  MOVWF  56
+0CD7:  MOVF   38,W
+0CD8:  MOVWF  57
+0CD9:  MOVF   37,W
+0CDA:  MOVWF  56
 ....................                   fakePointer = 13;   
-0CD9:  MOVLW  0D
-0CDA:  MOVWF  39
+0CDB:  MOVLW  0D
+0CDC:  MOVWF  39
 ....................                   printf("set pressed\n"); 
-0CDB:  MOVLW  F5
-0CDC:  BSF    03.6
-0CDD:  MOVWF  0D
-0CDE:  MOVLW  00
-0CDF:  MOVWF  0F
-0CE0:  BCF    0A.3
-0CE1:  BCF    03.6
-0CE2:  CALL   2EC
-0CE3:  BSF    0A.3
+0CDD:  MOVLW  F5
+0CDE:  BSF    03.6
+0CDF:  MOVWF  0D
+0CE0:  MOVLW  00
+0CE1:  MOVWF  0F
+0CE2:  BCF    0A.3
+0CE3:  BCF    03.6
+0CE4:  CALL   2EC
+0CE5:  BSF    0A.3
 ....................                   break; 
-0CE4:  GOTO   536
+0CE6:  GOTO   538
 ....................          case 4:  c_but1 = convertTimer(inputFeq); 
-0CE5:  MOVF   38,W
-0CE6:  MOVWF  5F
-0CE7:  MOVF   37,W
-0CE8:  MOVWF  5E
-0CE9:  BCF    0A.3
-0CEA:  CALL   344
-0CEB:  BSF    0A.3
-0CEC:  MOVF   79,W
-0CED:  MOVWF  47
-0CEE:  MOVF   78,W
-0CEF:  MOVWF  46
+0CE7:  MOVF   38,W
+0CE8:  MOVWF  5F
+0CE9:  MOVF   37,W
+0CEA:  MOVWF  5E
+0CEB:  BCF    0A.3
+0CEC:  CALL   344
+0CED:  BSF    0A.3
+0CEE:  MOVF   79,W
+0CEF:  MOVWF  47
+0CF0:  MOVF   78,W
+0CF1:  MOVWF  46
 ....................                   c_feq_but4 = inputFeq;  
-0CF0:  MOVF   38,W
-0CF1:  MOVWF  59
-0CF2:  MOVF   37,W
-0CF3:  MOVWF  58
+0CF2:  MOVF   38,W
+0CF3:  MOVWF  59
+0CF4:  MOVF   37,W
+0CF5:  MOVWF  58
 ....................                   fakePointer = 14; 
-0CF4:  MOVLW  0E
-0CF5:  MOVWF  39
+0CF6:  MOVLW  0E
+0CF7:  MOVWF  39
 ....................                   printf("set pressed\n"); 
-0CF6:  MOVLW  FC
-0CF7:  BSF    03.6
-0CF8:  MOVWF  0D
-0CF9:  MOVLW  00
-0CFA:  MOVWF  0F
-0CFB:  BCF    0A.3
-0CFC:  BCF    03.6
-0CFD:  CALL   2EC
-0CFE:  BSF    0A.3
+0CF8:  MOVLW  FC
+0CF9:  BSF    03.6
+0CFA:  MOVWF  0D
+0CFB:  MOVLW  00
+0CFC:  MOVWF  0F
+0CFD:  BCF    0A.3
+0CFE:  BCF    03.6
+0CFF:  CALL   2EC
+0D00:  BSF    0A.3
 ....................                   break; 
-0CFF:  GOTO   536
+0D01:  GOTO   538
 ....................          case 5:  c_but1 = convertTimer(inputFeq); 
-0D00:  MOVF   38,W
-0D01:  MOVWF  5F
-0D02:  MOVF   37,W
-0D03:  MOVWF  5E
-0D04:  BCF    0A.3
-0D05:  CALL   344
-0D06:  BSF    0A.3
-0D07:  MOVF   79,W
-0D08:  MOVWF  47
-0D09:  MOVF   78,W
-0D0A:  MOVWF  46
+0D02:  MOVF   38,W
+0D03:  MOVWF  5F
+0D04:  MOVF   37,W
+0D05:  MOVWF  5E
+0D06:  BCF    0A.3
+0D07:  CALL   344
+0D08:  BSF    0A.3
+0D09:  MOVF   79,W
+0D0A:  MOVWF  47
+0D0B:  MOVF   78,W
+0D0C:  MOVWF  46
 ....................                   c_feq_but5 = inputFeq;  
-0D0B:  MOVF   38,W
-0D0C:  MOVWF  5B
-0D0D:  MOVF   37,W
-0D0E:  MOVWF  5A
+0D0D:  MOVF   38,W
+0D0E:  MOVWF  5B
+0D0F:  MOVF   37,W
+0D10:  MOVWF  5A
 ....................                   fakePointer = 15;   
-0D0F:  MOVLW  0F
-0D10:  MOVWF  39
+0D11:  MOVLW  0F
+0D12:  MOVWF  39
 ....................                   printf("set pressed\n"); 
-0D11:  MOVLW  03
-0D12:  BSF    03.6
-0D13:  MOVWF  0D
-0D14:  MOVLW  01
-0D15:  MOVWF  0F
-0D16:  BCF    0A.3
-0D17:  BCF    03.6
-0D18:  CALL   2EC
-0D19:  BSF    0A.3
+0D13:  MOVLW  03
+0D14:  BSF    03.6
+0D15:  MOVWF  0D
+0D16:  MOVLW  01
+0D17:  MOVWF  0F
+0D18:  BCF    0A.3
+0D19:  BCF    03.6
+0D1A:  CALL   2EC
+0D1B:  BSF    0A.3
 ....................                   break; 
-0D1A:  GOTO   536
+0D1C:  GOTO   538
 ....................          case 6:  c_but1 = convertTimer(inputFeq); 
-0D1B:  MOVF   38,W
-0D1C:  MOVWF  5F
-0D1D:  MOVF   37,W
-0D1E:  MOVWF  5E
-0D1F:  BCF    0A.3
-0D20:  CALL   344
-0D21:  BSF    0A.3
-0D22:  MOVF   79,W
-0D23:  MOVWF  47
-0D24:  MOVF   78,W
-0D25:  MOVWF  46
+0D1D:  MOVF   38,W
+0D1E:  MOVWF  5F
+0D1F:  MOVF   37,W
+0D20:  MOVWF  5E
+0D21:  BCF    0A.3
+0D22:  CALL   344
+0D23:  BSF    0A.3
+0D24:  MOVF   79,W
+0D25:  MOVWF  47
+0D26:  MOVF   78,W
+0D27:  MOVWF  46
 ....................                   c_feq_but6 = inputFeq;  
-0D26:  MOVF   38,W
-0D27:  MOVWF  5D
-0D28:  MOVF   37,W
-0D29:  MOVWF  5C
+0D28:  MOVF   38,W
+0D29:  MOVWF  5D
+0D2A:  MOVF   37,W
+0D2B:  MOVWF  5C
 ....................                   fakePointer = 16; 
-0D2A:  MOVLW  10
-0D2B:  MOVWF  39
+0D2C:  MOVLW  10
+0D2D:  MOVWF  39
 ....................                   printf("set pressed\n"); 
-0D2C:  MOVLW  0A
-0D2D:  BSF    03.6
-0D2E:  MOVWF  0D
-0D2F:  MOVLW  01
-0D30:  MOVWF  0F
-0D31:  BCF    0A.3
-0D32:  BCF    03.6
-0D33:  CALL   2EC
-0D34:  BSF    0A.3
+0D2E:  MOVLW  0A
+0D2F:  BSF    03.6
+0D30:  MOVWF  0D
+0D31:  MOVLW  01
+0D32:  MOVWF  0F
+0D33:  BCF    0A.3
+0D34:  BCF    03.6
+0D35:  CALL   2EC
+0D36:  BSF    0A.3
 ....................                   break; 
-0D35:  GOTO   536
+0D37:  GOTO   538
 ....................          } 
 ....................       } 
 ....................        
 ....................       if(!input(PIN_B3)){ 
-0D36:  BSF    03.5
-0D37:  BSF    06.3
-0D38:  BCF    03.5
-0D39:  BTFSC  06.3
-0D3A:  GOTO   550
+0D38:  BSF    03.5
+0D39:  BSF    06.3
+0D3A:  BCF    03.5
+0D3B:  BTFSC  06.3
+0D3C:  GOTO   556
+....................          output_high(PIN_A7); 
+0D3D:  BSF    03.5
+0D3E:  BCF    05.7
+0D3F:  BCF    03.5
+0D40:  BSF    05.7
 ....................          lastButton = 1; 
-0D3B:  MOVLW  01
-0D3C:  MOVWF  36
+0D41:  MOVLW  01
+0D42:  MOVWF  36
 ....................          START_TIME  = c_but1; 
-0D3D:  MOVF   47,W
-0D3E:  MOVWF  32
-0D3F:  MOVF   46,W
-0D40:  MOVWF  31
+0D43:  MOVF   47,W
+0D44:  MOVWF  32
+0D45:  MOVF   46,W
+0D46:  MOVWF  31
 ....................          enable_interrupts(INT_TIMER1); 
-0D41:  BSF    03.5
-0D42:  BSF    0C.0
+0D47:  BSF    03.5
+0D48:  BSF    0C.0
 ....................          printf("1 pressed\n"); 
-0D43:  MOVLW  11
-0D44:  BCF    03.5
-0D45:  BSF    03.6
-0D46:  MOVWF  0D
-0D47:  MOVLW  01
-0D48:  MOVWF  0F
-0D49:  BCF    0A.3
-0D4A:  BCF    03.6
-0D4B:  CALL   2EC
-0D4C:  BSF    0A.3
-....................          fakePointer = 1; 
+0D49:  MOVLW  11
+0D4A:  BCF    03.5
+0D4B:  BSF    03.6
+0D4C:  MOVWF  0D
 0D4D:  MOVLW  01
-0D4E:  MOVWF  39
+0D4E:  MOVWF  0F
+0D4F:  BCF    0A.3
+0D50:  BCF    03.6
+0D51:  CALL   2EC
+0D52:  BSF    0A.3
+....................          fakePointer = 1; 
+0D53:  MOVLW  01
+0D54:  MOVWF  39
 ....................       } 
-0D4F:  GOTO   5F1
+0D55:  GOTO   60F
 ....................       else if(!input(PIN_B2)){ 
-0D50:  BSF    03.5
-0D51:  BSF    06.2
-0D52:  BCF    03.5
-0D53:  BTFSC  06.2
-0D54:  GOTO   56A
-....................          lastButton = 2; 
-0D55:  MOVLW  02
-0D56:  MOVWF  36
-....................          START_TIME  = c_but2; 
-0D57:  MOVF   49,W
-0D58:  MOVWF  32
-0D59:  MOVF   48,W
-0D5A:  MOVWF  31
-....................          enable_interrupts(INT_TIMER1); 
+0D56:  BSF    03.5
+0D57:  BSF    06.2
+0D58:  BCF    03.5
+0D59:  BTFSC  06.2
+0D5A:  GOTO   574
+....................          output_high(PIN_A7); 
 0D5B:  BSF    03.5
-0D5C:  BSF    0C.0
+0D5C:  BCF    05.7
+0D5D:  BCF    03.5
+0D5E:  BSF    05.7
+....................          lastButton = 2; 
+0D5F:  MOVLW  02
+0D60:  MOVWF  36
+....................          START_TIME  = c_but2; 
+0D61:  MOVF   49,W
+0D62:  MOVWF  32
+0D63:  MOVF   48,W
+0D64:  MOVWF  31
+....................          enable_interrupts(INT_TIMER1); 
+0D65:  BSF    03.5
+0D66:  BSF    0C.0
 ....................          printf("2 pressed\n"); 
-0D5D:  MOVLW  17
-0D5E:  BCF    03.5
-0D5F:  BSF    03.6
-0D60:  MOVWF  0D
-0D61:  MOVLW  01
-0D62:  MOVWF  0F
-0D63:  BCF    0A.3
-0D64:  BCF    03.6
-0D65:  CALL   2EC
-0D66:  BSF    0A.3
+0D67:  MOVLW  17
+0D68:  BCF    03.5
+0D69:  BSF    03.6
+0D6A:  MOVWF  0D
+0D6B:  MOVLW  01
+0D6C:  MOVWF  0F
+0D6D:  BCF    0A.3
+0D6E:  BCF    03.6
+0D6F:  CALL   2EC
+0D70:  BSF    0A.3
 ....................          fakePointer = 2; 
-0D67:  MOVLW  02
-0D68:  MOVWF  39
+0D71:  MOVLW  02
+0D72:  MOVWF  39
 ....................       } 
-0D69:  GOTO   5F1
+0D73:  GOTO   60F
 ....................       else if(!input(PIN_B1)){ 
-0D6A:  BSF    03.5
-0D6B:  BSF    06.1
-0D6C:  BCF    03.5
-0D6D:  BTFSC  06.1
-0D6E:  GOTO   58B
+0D74:  BSF    03.5
+0D75:  BSF    06.1
+0D76:  BCF    03.5
+0D77:  BTFSC  06.1
+0D78:  GOTO   599
+....................          output_high(PIN_A7); 
+0D79:  BSF    03.5
+0D7A:  BCF    05.7
+0D7B:  BCF    03.5
+0D7C:  BSF    05.7
 ....................          lastButton = 3; 
-0D6F:  MOVLW  03
-0D70:  MOVWF  36
+0D7D:  MOVLW  03
+0D7E:  MOVWF  36
 ....................          START_TIME  = c_but3; 
-0D71:  MOVF   4B,W
-0D72:  MOVWF  32
-0D73:  MOVF   4A,W
-0D74:  MOVWF  31
+0D7F:  MOVF   4B,W
+0D80:  MOVWF  32
+0D81:  MOVF   4A,W
+0D82:  MOVWF  31
 ....................          enable_interrupts(INT_TIMER1); 
-0D75:  BSF    03.5
-0D76:  BSF    0C.0
+0D83:  BSF    03.5
+0D84:  BSF    0C.0
 ....................          printf("3 pressed\n"); 
-0D77:  MOVLW  1D
-0D78:  BCF    03.5
-0D79:  BSF    03.6
-0D7A:  MOVWF  0D
-0D7B:  MOVLW  01
-0D7C:  MOVWF  0F
-0D7D:  BCF    0A.3
-0D7E:  BCF    03.6
-0D7F:  CALL   2EC
-0D80:  BSF    0A.3
+0D85:  MOVLW  1D
+0D86:  BCF    03.5
+0D87:  BSF    03.6
+0D88:  MOVWF  0D
+0D89:  MOVLW  01
+0D8A:  MOVWF  0F
+0D8B:  BCF    0A.3
+0D8C:  BCF    03.6
+0D8D:  CALL   2EC
+0D8E:  BSF    0A.3
 ....................          fakePointer = 3; 
-0D81:  MOVLW  03
-0D82:  MOVWF  39
+0D8F:  MOVLW  03
+0D90:  MOVWF  39
 ....................          lcd_Show(c_feq_but3); 
-0D83:  MOVF   57,W
-0D84:  MOVWF  5F
-0D85:  MOVF   56,W
-0D86:  MOVWF  5E
-0D87:  BCF    0A.3
-0D88:  CALL   2D3
-0D89:  BSF    0A.3
+0D91:  MOVF   57,W
+0D92:  MOVWF  5F
+0D93:  MOVF   56,W
+0D94:  MOVWF  5E
+0D95:  BCF    0A.3
+0D96:  CALL   2D3
+0D97:  BSF    0A.3
 ....................       } 
-0D8A:  GOTO   5F1
+0D98:  GOTO   60F
 ....................       else if(!input(PIN_B0)){ 
-0D8B:  BSF    03.5
-0D8C:  BSF    06.0
-0D8D:  BCF    03.5
-0D8E:  BTFSC  06.0
-0D8F:  GOTO   5AC
+0D99:  BSF    03.5
+0D9A:  BSF    06.0
+0D9B:  BCF    03.5
+0D9C:  BTFSC  06.0
+0D9D:  GOTO   5C2
+....................          output_high(PIN_A7); 
+0D9E:  BSF    03.5
+0D9F:  BCF    05.7
+0DA0:  BCF    03.5
+0DA1:  BSF    05.7
+....................          output_high(PIN_A7); 
+0DA2:  BSF    03.5
+0DA3:  BCF    05.7
+0DA4:  BCF    03.5
+0DA5:  BSF    05.7
 ....................          lastButton = 4; 
-0D90:  MOVLW  04
-0D91:  MOVWF  36
+0DA6:  MOVLW  04
+0DA7:  MOVWF  36
 ....................          START_TIME  = c_but4; 
-0D92:  MOVF   4D,W
-0D93:  MOVWF  32
-0D94:  MOVF   4C,W
-0D95:  MOVWF  31
+0DA8:  MOVF   4D,W
+0DA9:  MOVWF  32
+0DAA:  MOVF   4C,W
+0DAB:  MOVWF  31
 ....................          enable_interrupts(INT_TIMER1); 
-0D96:  BSF    03.5
-0D97:  BSF    0C.0
+0DAC:  BSF    03.5
+0DAD:  BSF    0C.0
 ....................           printf("4 pressed\n"); 
-0D98:  MOVLW  23
-0D99:  BCF    03.5
-0D9A:  BSF    03.6
-0D9B:  MOVWF  0D
-0D9C:  MOVLW  01
-0D9D:  MOVWF  0F
-0D9E:  BCF    0A.3
-0D9F:  BCF    03.6
-0DA0:  CALL   2EC
-0DA1:  BSF    0A.3
+0DAE:  MOVLW  23
+0DAF:  BCF    03.5
+0DB0:  BSF    03.6
+0DB1:  MOVWF  0D
+0DB2:  MOVLW  01
+0DB3:  MOVWF  0F
+0DB4:  BCF    0A.3
+0DB5:  BCF    03.6
+0DB6:  CALL   2EC
+0DB7:  BSF    0A.3
 ....................          fakePointer = 4; 
-0DA2:  MOVLW  04
-0DA3:  MOVWF  39
+0DB8:  MOVLW  04
+0DB9:  MOVWF  39
 ....................          lcd_Show(c_feq_but4); 
-0DA4:  MOVF   59,W
-0DA5:  MOVWF  5F
-0DA6:  MOVF   58,W
-0DA7:  MOVWF  5E
-0DA8:  BCF    0A.3
-0DA9:  CALL   2D3
-0DAA:  BSF    0A.3
+0DBA:  MOVF   59,W
+0DBB:  MOVWF  5F
+0DBC:  MOVF   58,W
+0DBD:  MOVWF  5E
+0DBE:  BCF    0A.3
+0DBF:  CALL   2D3
+0DC0:  BSF    0A.3
 ....................       } 
-0DAB:  GOTO   5F1
+0DC1:  GOTO   60F
 ....................       else if(!input(PIN_C5)){ 
-0DAC:  BSF    35.5
-0DAD:  MOVF   35,W
-0DAE:  BSF    03.5
-0DAF:  MOVWF  07
-0DB0:  BCF    03.5
-0DB1:  BTFSC  07.5
-0DB2:  GOTO   5CF
+0DC2:  BSF    35.5
+0DC3:  MOVF   35,W
+0DC4:  BSF    03.5
+0DC5:  MOVWF  07
+0DC6:  BCF    03.5
+0DC7:  BTFSC  07.5
+0DC8:  GOTO   5E9
+....................          output_high(PIN_A7); 
+0DC9:  BSF    03.5
+0DCA:  BCF    05.7
+0DCB:  BCF    03.5
+0DCC:  BSF    05.7
 ....................          lastButton = 5; 
-0DB3:  MOVLW  05
-0DB4:  MOVWF  36
+0DCD:  MOVLW  05
+0DCE:  MOVWF  36
 ....................          START_TIME  = c_but5; 
-0DB5:  MOVF   4F,W
-0DB6:  MOVWF  32
-0DB7:  MOVF   4E,W
-0DB8:  MOVWF  31
+0DCF:  MOVF   4F,W
+0DD0:  MOVWF  32
+0DD1:  MOVF   4E,W
+0DD2:  MOVWF  31
 ....................          enable_interrupts(INT_TIMER1); 
-0DB9:  BSF    03.5
-0DBA:  BSF    0C.0
+0DD3:  BSF    03.5
+0DD4:  BSF    0C.0
 ....................           printf("5 pressed\n"); 
-0DBB:  MOVLW  29
-0DBC:  BCF    03.5
-0DBD:  BSF    03.6
-0DBE:  MOVWF  0D
-0DBF:  MOVLW  01
-0DC0:  MOVWF  0F
-0DC1:  BCF    0A.3
-0DC2:  BCF    03.6
-0DC3:  CALL   2EC
-0DC4:  BSF    0A.3
+0DD5:  MOVLW  29
+0DD6:  BCF    03.5
+0DD7:  BSF    03.6
+0DD8:  MOVWF  0D
+0DD9:  MOVLW  01
+0DDA:  MOVWF  0F
+0DDB:  BCF    0A.3
+0DDC:  BCF    03.6
+0DDD:  CALL   2EC
+0DDE:  BSF    0A.3
 ....................          fakePointer = 5; 
-0DC5:  MOVLW  05
-0DC6:  MOVWF  39
+0DDF:  MOVLW  05
+0DE0:  MOVWF  39
 ....................          lcd_Show(c_feq_but5); 
-0DC7:  MOVF   5B,W
-0DC8:  MOVWF  5F
-0DC9:  MOVF   5A,W
-0DCA:  MOVWF  5E
-0DCB:  BCF    0A.3
-0DCC:  CALL   2D3
-0DCD:  BSF    0A.3
-....................       } 
-0DCE:  GOTO   5F1
-....................       else if(!input(PIN_C4)){ 
-0DCF:  BSF    35.4
-0DD0:  MOVF   35,W
-0DD1:  BSF    03.5
-0DD2:  MOVWF  07
-0DD3:  BCF    03.5
-0DD4:  BTFSC  07.4
-0DD5:  GOTO   5F1
-....................          lastButton = 6; 
-0DD6:  MOVLW  06
-0DD7:  MOVWF  36
-....................          START_TIME  = c_but6; 
-0DD8:  MOVF   51,W
-0DD9:  MOVWF  32
-0DDA:  MOVF   50,W
-0DDB:  MOVWF  31
-....................          enable_interrupts(INT_TIMER1); 
-0DDC:  BSF    03.5
-0DDD:  BSF    0C.0
-....................          printf("6 pressed\n"); 
-0DDE:  MOVLW  2F
-0DDF:  BCF    03.5
-0DE0:  BSF    03.6
-0DE1:  MOVWF  0D
-0DE2:  MOVLW  01
-0DE3:  MOVWF  0F
-0DE4:  BCF    0A.3
-0DE5:  BCF    03.6
-0DE6:  CALL   2EC
+0DE1:  MOVF   5B,W
+0DE2:  MOVWF  5F
+0DE3:  MOVF   5A,W
+0DE4:  MOVWF  5E
+0DE5:  BCF    0A.3
+0DE6:  CALL   2D3
 0DE7:  BSF    0A.3
-....................          fakePointer = 6; 
-0DE8:  MOVLW  06
-0DE9:  MOVWF  39
-....................          lcd_Show(c_feq_but6); 
-0DEA:  MOVF   5D,W
-0DEB:  MOVWF  5F
-0DEC:  MOVF   5C,W
-0DED:  MOVWF  5E
-0DEE:  BCF    0A.3
-0DEF:  CALL   2D3
-0DF0:  BSF    0A.3
 ....................       } 
-0DF1:  GOTO   0B0
+0DE8:  GOTO   60F
+....................       else if(!input(PIN_C4)){ 
+0DE9:  BSF    35.4
+0DEA:  MOVF   35,W
+0DEB:  BSF    03.5
+0DEC:  MOVWF  07
+0DED:  BCF    03.5
+0DEE:  BTFSC  07.4
+0DEF:  GOTO   60F
+....................          output_high(PIN_A7); 
+0DF0:  BSF    03.5
+0DF1:  BCF    05.7
+0DF2:  BCF    03.5
+0DF3:  BSF    05.7
+....................          lastButton = 6; 
+0DF4:  MOVLW  06
+0DF5:  MOVWF  36
+....................          START_TIME  = c_but6; 
+0DF6:  MOVF   51,W
+0DF7:  MOVWF  32
+0DF8:  MOVF   50,W
+0DF9:  MOVWF  31
+....................          enable_interrupts(INT_TIMER1); 
+0DFA:  BSF    03.5
+0DFB:  BSF    0C.0
+....................          printf("6 pressed\n"); 
+0DFC:  MOVLW  2F
+0DFD:  BCF    03.5
+0DFE:  BSF    03.6
+0DFF:  MOVWF  0D
+0E00:  MOVLW  01
+0E01:  MOVWF  0F
+0E02:  BCF    0A.3
+0E03:  BCF    03.6
+0E04:  CALL   2EC
+0E05:  BSF    0A.3
+....................          fakePointer = 6; 
+0E06:  MOVLW  06
+0E07:  MOVWF  39
+....................          lcd_Show(c_feq_but6); 
+0E08:  MOVF   5D,W
+0E09:  MOVWF  5F
+0E0A:  MOVF   5C,W
+0E0B:  MOVWF  5E
+0E0C:  BCF    0A.3
+0E0D:  CALL   2D3
+0E0E:  BSF    0A.3
+....................       } 
+0E0F:  GOTO   0B0
 ....................        
 ....................    }   
 .................... } 
-0DF2:  SLEEP
+0E10:  SLEEP
 
 Configuration Fuses:
    Word  1: 2FC4   INTRC_IO NOWDT PUT NOMCLR NOPROTECT NOCPD BROWNOUT IESO FCMEN NOLVP NODEBUG

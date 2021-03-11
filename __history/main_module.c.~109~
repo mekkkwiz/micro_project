@@ -254,10 +254,7 @@ void main()
                      lcd_putc("Hz");
                      fakePointer = -1;
                      break;
-            defalut: disable_interrupts(INT_TIMER1);
-                     output_low(PIN_A7);
-                     break;
-                     
+            defalut : disable_interrupts(INT_TIMER1); break;
                      
          }
       if (!input(PIN_C2)){//reset
@@ -326,7 +323,6 @@ void main()
       }
       
       if(!input(PIN_B3)){
-         output_high(PIN_A7);
          lastButton = 1;
          START_TIME  = c_but1;
          enable_interrupts(INT_TIMER1);
@@ -334,7 +330,6 @@ void main()
          fakePointer = 1;
       }
       else if(!input(PIN_B2)){
-         output_high(PIN_A7);
          lastButton = 2;
          START_TIME  = c_but2;
          enable_interrupts(INT_TIMER1);
@@ -342,7 +337,6 @@ void main()
          fakePointer = 2;
       }
       else if(!input(PIN_B1)){
-         output_high(PIN_A7);
          lastButton = 3;
          START_TIME  = c_but3;
          enable_interrupts(INT_TIMER1);
@@ -351,8 +345,6 @@ void main()
          lcd_Show(c_feq_but3);
       }
       else if(!input(PIN_B0)){
-         output_high(PIN_A7);
-         output_high(PIN_A7);
          lastButton = 4;
          START_TIME  = c_but4;
          enable_interrupts(INT_TIMER1);
@@ -361,7 +353,6 @@ void main()
          lcd_Show(c_feq_but4);
       }
       else if(!input(PIN_C5)){
-         output_high(PIN_A7);
          lastButton = 5;
          START_TIME  = c_but5;
          enable_interrupts(INT_TIMER1);
@@ -370,7 +361,6 @@ void main()
          lcd_Show(c_feq_but5);
       }
       else if(!input(PIN_C4)){
-         output_high(PIN_A7);
          lastButton = 6;
          START_TIME  = c_but6;
          enable_interrupts(INT_TIMER1);

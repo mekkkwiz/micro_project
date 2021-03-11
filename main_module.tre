@@ -1,5 +1,5 @@
 ÀÄmain_module
-   ÃÄMAIN  1/1523  Ram=40
+   ÃÄMAIN  1/1553  Ram=40
    ³  ÃÄ@cinit1  (Inline)  Ram=0
    ³  ÃÄlcd_init  0/62  Ram=6
    ³  ³  ÃÄ@delay_ms1  0/20  Ram=1
@@ -248,7 +248,7 @@
    ³  ÃÄ@PSTRINGC7_9600_62_63  0/88  Ram=4
    ³  ÃÄ@PSTRINGC7_9600_62_63  0/88  Ram=4
    ³  ÃÄ@PSTRINGC7_9600_62_63  0/88  Ram=4
-   ³  ÃÄ@goto13740  1/10  Ram=0
+   ³  ÃÄ@goto61873  1/10  Ram=0
    ³  ÃÄconvertTimer  0/136  Ram=4
    ³  ³  ÀÄ@DIV3232  (Inline)  Ram=13
    ³  ÃÄ@PSTRINGC7_9600_62_63  0/88  Ram=4

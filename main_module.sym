@@ -228,7 +228,7 @@ ROM Allocation:
 000800  @cinit1
 000800  MAIN
 000829  @cinit2
-000DF3  @goto13740
+000E11  @goto61873
 0136  StrtoulGO
 0136  StrtolGO
 0C23  defalut
@@ -237,7 +237,7 @@ Project Directory:
     D:\WORK\em_lab\micro_project\
 
 Project Files:
-    main_module.c                                           [11-มี.ค.-21 22:44  CRC=6088EA3A]
+    main_module.c                                           [11-มี.ค.-21 23:16  CRC=24E08C1E]
     C:\Program Files (x86)\PICC\Devices\16F886.h            [21-ก.ค.-17 13:41  CRC=7107D019]
     C:\Program Files (x86)\PICC\Drivers\stdio.h             [31-ก.ค.-07 15:24  CRC=4E4534F4]
     C:\Program Files (x86)\PICC\Drivers\string.h            [26-มี.ค.-15 13:34  CRC=C4814297]
@@ -246,10 +246,10 @@ Project Files:
     C:\Program Files (x86)\PICC\Drivers\stdlib.h            [29-มิ.ย.-16 10:34  CRC=7E9CC16B]
     C:\Program Files (x86)\PICC\Drivers\lcd.c               [22-ก.พ.-16 10:05  CRC=D1A6378A]
 
-Source signature=BCDC5068
+Source signature=8133F24C
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=A9A1
+Hex file CRC=9B71
 
 Units:
     main_module (main)
