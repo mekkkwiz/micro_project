@@ -1,10 +1,9 @@
-F N "MAIN" 0 71 ""
-D G "__PCM__" 0 178 ""5.074""
-D G "__DEVICE__" 0 178 "886"
-D G "__DATE__" 0 178 ""10-มี.ค.-21""
-D G "__TIME__" 0 178 ""23:26:22""
-D G "_UNICODE" 0 178 ""?""
-D G "__EVAL" 0 178 ""?"" "Standard Header file for the PIC16F886 device ////////////////"
+D G "__PCM__" 0 196 ""5.074""
+D G "__DEVICE__" 0 196 "886"
+D G "__DATE__" 0 196 ""11-มี.ค.-21""
+D G "__TIME__" 0 196 ""17:51:59""
+D G "_UNICODE" 0 196 ""?""
+D G "__EVAL" 0 196 ""?"" "Standard Header file for the PIC16F886 device ////////////////"
 c L "set_tris_a" 1 3 6 "FUNCTION"
 f N "set_tris_a" 1 39 ""
 v L "value" 1 39 "int8" `55 
@@ -1634,23 +1633,23 @@ C L "MAIN" 0 42 1 "FUNCTION"
 C L "MAIN" 0 42 2 "FUNCTION"
 V L "lastButton" 0 81 "int8" `931 
 V L "inputFeq" 0 82 "int16" `932 
+V L "topText" 0 83 "int8[11]" `933 
 C L "MAIN" 0 42 2 "FUNCTION"
-V L "d_but1" 0 85 "int16" `933 
-V L "d_but2" 0 86 "int16" `934 
-V L "d_but3" 0 87 "int16" `935 
-V L "d_but4" 0 88 "int16" `936 
-V L "d_but5" 0 89 "int16" `937 
-V L "d_but6" 0 90 "int16" `938 
+V L "d_but1" 0 86 "int16" `934 
+V L "d_but2" 0 87 "int16" `935 
+V L "d_but3" 0 88 "int16" `936 
+V L "d_but4" 0 89 "int16" `937 
+V L "d_but5" 0 90 "int16" `938 
+V L "d_but6" 0 91 "int16" `939 
+C L "MAIN" 0 42 2 "FUNCTION"
+V L "c_but1" 0 94 "int16" `940 
+V L "c_but2" 0 95 "int16" `941 
+V L "c_but3" 0 96 "int16" `942 
+V L "c_but4" 0 97 "int16" `943 
+V L "c_but5" 0 98 "int16" `944 
+V L "c_but6" 0 99 "int16" `945 
 C L "MAIN" 0 42 1 "FUNCTION"
-V L "c_but1" 0 92 "int16" `939 
-V L "c_but2" 0 93 "int16" `940 
-V L "c_but3" 0 94 "int16" `941 
-V L "c_but4" 0 95 "int16" `942 
-V L "c_but5" 0 96 "int16" `943 
-V L "c_but6" 0 97 "int16" `944 
-C L "MAIN" 0 42 6 "FUNCTION"
-V L "setIsPressed" 0 104 "int1" `945 
-C L "MAIN" 0 42 1 "FUNCTION"
+V L "setIsPressed" 0 101 "int1" `946 
 C L "MAIN" 0 42 1 "FUNCTION"
 C L "MAIN" 0 42 1 "FUNCTION"
 C L "MAIN" 0 42 1 "FUNCTION"
