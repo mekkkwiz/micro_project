@@ -1,9 +1,10 @@
-D G "__PCM__" 0 196 ""5.074""
-D G "__DEVICE__" 0 196 "886"
-D G "__DATE__" 0 196 ""11-มี.ค.-21""
-D G "__TIME__" 0 196 ""17:51:59""
-D G "_UNICODE" 0 196 ""?""
-D G "__EVAL" 0 196 ""?"" "Standard Header file for the PIC16F886 device ////////////////"
+f N "spi_xfer" 1 610 ""
+D G "__PCM__" 1 611 ""5.074""
+D G "__DEVICE__" 1 611 "886"
+D G "__DATE__" 1 611 ""11-มี.ค.-21""
+D G "__TIME__" 1 611 ""22:44:19""
+D G "_UNICODE" 1 611 ""?""
+D G "__EVAL" 1 611 ""?"" "Standard Header file for the PIC16F886 device ////////////////"
 c L "set_tris_a" 1 3 6 "FUNCTION"
 f N "set_tris_a" 1 39 ""
 v L "value" 1 39 "int8" `55 
@@ -1614,42 +1615,57 @@ F G "lcd_cursor_on" 7 444 "void(int8 on)" `907
 C L "lcd_cursor_on" 7 2 1 "FUNCTION"
 C L "lcd_cursor_on" 7 2 1 "FUNCTION"
 V G "START_TIME" 0 40 "int16" `909 
-V G "arr" 0 43 "int16[25]" `910 
-V G "time" 0 48 "int16[25]" `911 
+C L "timer1_isr" 0 42 9 "FUNCTION"
 F N "timer1_isr" 0 53 ""
-F G "timer1_isr" 0 53 "void()" `912 
+F G "timer1_isr" 0 53 "void()" `910 
 C L "lcd_Show" 0 42 1 "FUNCTION"
 F N "lcd_Show" 0 59 ""
-V L "f" 0 59 "int16" `914 
-F G "lcd_Show" 0 59 "void(int16 f)" `913 
+V L "f" 0 59 "int16" `912 
+F G "lcd_Show" 0 59 "void(int16 f)" `911 
 C L "lcd_Show" 0 42 1 "FUNCTION"
 C L "convertTimer" 0 42 1 "FUNCTION"
 F N "convertTimer" 0 67 ""
-V L "f" 0 67 "int16" `924 
-F G "convertTimer" 0 67 "int16(int16 f)" `923 
+V L "f" 0 67 "int16" `922 
+F G "convertTimer" 0 67 "int16(int16 f)" `921 
 F N "MAIN" 0 71 ""
-F G "MAIN" 0 72 "void()" `928 
+F G "MAIN" 0 72 "void()" `926 
 C L "MAIN" 0 42 1 "FUNCTION"
 C L "MAIN" 0 42 2 "FUNCTION"
-V L "lastButton" 0 81 "int8" `931 
-V L "inputFeq" 0 82 "int16" `932 
-V L "topText" 0 83 "int8[11]" `933 
+V L "lastButton" 0 86 "int8" `931 
+V L "inputFeq" 0 87 "int16" `932 
+V L "fakePointer" 0 88 "int8" `933 
 C L "MAIN" 0 42 2 "FUNCTION"
-V L "d_but1" 0 86 "int16" `934 
-V L "d_but2" 0 87 "int16" `935 
-V L "d_but3" 0 88 "int16" `936 
-V L "d_but4" 0 89 "int16" `937 
-V L "d_but5" 0 90 "int16" `938 
-V L "d_but6" 0 91 "int16" `939 
+V L "d_but1" 0 91 "int16" `934 
+V L "d_but2" 0 92 "int16" `935 
+V L "d_but3" 0 93 "int16" `936 
+V L "d_but4" 0 94 "int16" `937 
+V L "d_but5" 0 95 "int16" `938 
+V L "d_but6" 0 96 "int16" `939 
 C L "MAIN" 0 42 2 "FUNCTION"
-V L "c_but1" 0 94 "int16" `940 
-V L "c_but2" 0 95 "int16" `941 
-V L "c_but3" 0 96 "int16" `942 
-V L "c_but4" 0 97 "int16" `943 
-V L "c_but5" 0 98 "int16" `944 
-V L "c_but6" 0 99 "int16" `945 
+V L "c_but1" 0 99 "int16" `940 
+V L "c_but2" 0 100 "int16" `941 
+V L "c_but3" 0 101 "int16" `942 
+V L "c_but4" 0 102 "int16" `943 
+V L "c_but5" 0 103 "int16" `944 
+V L "c_but6" 0 104 "int16" `945 
+V L "c_feq_but1" 0 106 "int16" `946 
+V L "c_feq_but2" 0 107 "int16" `947 
+V L "c_feq_but3" 0 108 "int16" `948 
+V L "c_feq_but4" 0 109 "int16" `949 
+V L "c_feq_but5" 0 110 "int16" `950 
+V L "c_feq_but6" 0 111 "int16" `951 
 C L "MAIN" 0 42 1 "FUNCTION"
-V L "setIsPressed" 0 101 "int1" `946 
+C L "MAIN" 0 42 1 "FUNCTION"
+C L "MAIN" 0 42 1 "FUNCTION"
+C L "MAIN" 0 42 1 "FUNCTION"
+C L "MAIN" 0 42 1 "FUNCTION"
+C L "MAIN" 0 42 1 "FUNCTION"
+C L "MAIN" 0 42 1 "FUNCTION"
+C L "MAIN" 0 42 1 "FUNCTION"
+C L "MAIN" 0 42 1 "FUNCTION"
+C L "MAIN" 0 42 1 "FUNCTION"
+C L "MAIN" 0 42 1 "FUNCTION"
+C L "MAIN" 0 42 1 "FUNCTION"
 C L "MAIN" 0 42 1 "FUNCTION"
 C L "MAIN" 0 42 1 "FUNCTION"
 C L "MAIN" 0 42 1 "FUNCTION"

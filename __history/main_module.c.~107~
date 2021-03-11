@@ -254,7 +254,7 @@ void main()
                      lcd_putc("Hz");
                      fakePointer = -1;
                      break;
-            defalut : disable_interrupts(INT_TIMER1); break;
+            case defalut : enable_interrupts(INT_TIMER1);
                      
          }
       if (!input(PIN_C2)){//reset

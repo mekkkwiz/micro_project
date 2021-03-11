@@ -1,11 +1,4 @@
->>> Warning 230 "main_module.c" Line 83(37,38): String truncated
->>> Warning 203 "main_module.c" Line 102(1,1): Condition always TRUE
->>> Warning 230 "main_module.c" Line 127(1,1): String truncated
->>> Warning 230 "main_module.c" Line 137(1,1): String truncated
->>> Warning 230 "main_module.c" Line 160(1,1): String truncated
->>> Warning 230 "main_module.c" Line 171(1,1): String truncated
->>> Warning 202 "main_module.c" Line 43(7,10): Variable never used:   arr
->>> Warning 202 "main_module.c" Line 48(7,11): Variable never used:   time
-      Memory usage:   ROM=24%      RAM=46% - 51%
-      0 Errors,  8 Warnings.
+>>> Warning 203 "main_module.c" Line 113(1,1): Condition always TRUE
+      Memory usage:   ROM=31%      RAM=18% - 24%
+      0 Errors,  1 Warnings.
 Build Successful.

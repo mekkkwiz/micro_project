@@ -72,11 +72,6 @@ void main()
 {
    lcd_init();
    //initial code for setup timer for interrupt
-   lcd_putc('\f');
-   lcd_gotoxy(5, 1); 
-   lcd_putc("WELCOME"); 
-   lcd_gotoxy(1, 2);           
-   lcd_putc("CYBMCYSSBSSNTMMC");   
    setup_timer_1(T1_INTERNAL | T1_DIV_BY_4);
    set_timer1(START_TIME);
    enable_interrupts(INT_TIMER1);
@@ -103,165 +98,64 @@ void main()
    int16 c_but5 = d_but5;
    int16 c_but6 = d_but6;
    
-   int16 c_feq_but1 = 1043;
-   int16 c_feq_but2 = 1175;
-   int16 c_feq_but3 = 1319;
-   int16 c_feq_but4 = 1399;
-   int16 c_feq_but5 = 1565;
-   int16 c_feq_but6 = 1764;
+   int16 c_feq_but1;
+   int16 c_feq_but2;
+   int16 c_feq_but3;
+   int16 c_feq_but4;
+   int16 c_feq_but5;
+   int16 c_feq_but6;
    //-----------------------------------------------------//
+   boolean setIsPressed = !input(PIN_B7);
    While(1){
+      lcd_putc('\f');
+      lcd_gotoxy(4, 1);
       switch(fakePointer){
-            case 1:  lcd_putc('\f');
-                     lcd_gotoxy(5, 1); 
+            case 1:  lcd_gotoxy(5, 1); 
                      lcd_putc("BT1_FEQ"); 
-                     lcd_gotoxy(5, 2);           // Go to column 7 row 2
-                     printf(lcd_putc,"%lu",c_feq_but1);   // Write num with 5 numbers max
-                     lcd_gotoxy(12,2);
-                     lcd_putc("Hz");
-                     fakePointer = -1;
                      break;
-            case 2:  lcd_putc('\f');
-                     lcd_gotoxy(5, 1); 
-                     lcd_putc("BT2_FEQ"); 
-                     lcd_gotoxy(5, 2);           // Go to column 7 row 2
-                     printf(lcd_putc,"%lu",c_feq_but2);   // Write num with 5 numbers max
-                     lcd_gotoxy(12,2);
-                     lcd_putc("Hz");
-                     fakePointer = -1;
-                     lcd_Show(c_feq_but2);
+            case 2:  lcd_gotoxy(5, 1); 
+                     lcd_putc("BT1_FEQ"); 
                      break;
-            case 3:  lcd_putc('\f');
-                     lcd_gotoxy(5, 1); 
-                     lcd_putc("BT3_FEQ"); 
-                     lcd_gotoxy(5, 2);           // Go to column 7 row 2
-                     printf(lcd_putc,"%lu",c_feq_but3);   // Write num with 5 numbers max
-                     lcd_gotoxy(12,2);
-                     lcd_putc("Hz");
-                     fakePointer = -1;
+            case 3:  lcd_gotoxy(5, 1); 
+                     lcd_putc("BT1_FEQ"); 
                      break;
-            case 4:  lcd_putc('\f');
-                     lcd_gotoxy(5, 1); 
-                     lcd_putc("BT4_FEQ"); 
-                     lcd_gotoxy(5, 2);           // Go to column 7 row 2
-                     printf(lcd_putc,"%lu",c_feq_but4);   // Write num with 5 numbers max
-                     lcd_gotoxy(12,2);
-                     lcd_putc("Hz");
-                     fakePointer = -1;
+            case 4:  lcd_gotoxy(5, 1); 
+                     lcd_putc("BT1_FEQ"); 
                      break;
-            case 5:  lcd_putc('\f');
-                     lcd_gotoxy(5, 1); 
-                     lcd_putc("BT5_FEQ"); 
-                     lcd_gotoxy(5, 2);           // Go to column 7 row 2
-                     printf(lcd_putc,"%lu",c_feq_but5);   // Write num with 5 numbers max
-                     lcd_gotoxy(12,2);
-                     lcd_putc("Hz");
-                     fakePointer = -1;
+            case 5:  lcd_gotoxy(5, 1); 
+                     lcd_putc("BT1_FEQ"); 
                      break;
-            case 6:  lcd_putc('\f');
-                     lcd_gotoxy(5, 1); 
-                     lcd_putc("BT6_FEQ"); 
-                     lcd_gotoxy(5, 2);           // Go to column 7 row 2
-                     printf(lcd_putc,"%lu",c_feq_but6);   // Write num with 5 numbers max
-                     lcd_gotoxy(12,2);
-                     lcd_putc("Hz");
-                     fakePointer = -1;
+            case 6:  lcd_gotoxy(5, 1); 
+                     lcd_putc("BT1_FEQ"); 
                      break;
-            case 7:  lcd_putc('\f');
-                     lcd_gotoxy(4, 1); 
-                     lcd_putc("FEQ_RESET"); 
-                     lcd_gotoxy(5, 2);           // Go to column 7 row 2
-                     printf(lcd_putc,"%lu",inputFeq);   // Write num with 5 numbers max
-                     lcd_gotoxy(12,2);
-                     lcd_putc("Hz");
-
-                     c_but1 = d_but1;
-                     c_but2 = d_but2;
-                     c_but3 = d_but3;
-                     c_but4 = d_but4;
-                     c_but5 = d_but5;
-                     c_but6 = d_but6;
-
-                     c_feq_but1 = 1043;
-                     c_feq_but2 = 1175;
-                     c_feq_but3 = 1319;
-                     c_feq_but4 = 1399;
-                     c_feq_but5 = 1565;
-                     c_feq_but6 = 1764;
-
-                     fakePointer = -1;
-                     break;
-            case 11: lcd_putc('\f');
-                     lcd_gotoxy(3, 1); 
+            case 11: lcd_gotoxy(3, 1); 
                      lcd_putc("BT1_FEQ_SET");
-                     lcd_gotoxy(5, 2);
-                     printf(lcd_putc,"%lu",inputFeq);
-                     lcd_gotoxy(12,2);
-                     lcd_putc("Hz");
-                     fakePointer = -1;
                      break;
-            case 12: lcd_putc('\f');
-                     lcd_gotoxy(3, 1); 
+            case 12: lcd_gotoxy(3, 1); 
                      lcd_putc("BT2_FEQ_SET"); 
-                     lcd_gotoxy(5, 2);
-                     printf(lcd_putc,"%lu",inputFeq);
-                     lcd_gotoxy(12,2);
-                     lcd_putc("Hz");
-                     fakePointer = -1;
                      break;
-            case 13: lcd_putc('\f');
-                     lcd_gotoxy(3, 1); 
+            case 13: lcd_gotoxy(3, 1); 
                      lcd_putc("BT3_FEQ_SET"); 
-                     lcd_gotoxy(5, 2);
-                     printf(lcd_putc,"%lu",inputFeq);
-                     lcd_gotoxy(12,2);
-                     lcd_putc("Hz");
-                     fakePointer = -1;
                      break;
-            case 14: lcd_putc('\f');
-                     lcd_gotoxy(3, 1); 
+            case 14: lcd_gotoxy(3, 1); 
                      lcd_putc("BT4_FEQ_SET"); 
-                     lcd_gotoxy(5, 2);
-                     printf(lcd_putc,"%lu",inputFeq);
-                     lcd_gotoxy(12,2);
-                     lcd_putc("Hz");
-                     fakePointer = -1;
                      break;
-            case 15: lcd_putc('\f');
-                     lcd_gotoxy(3, 1); 
+            case 15: lcd_gotoxy(3, 1); 
                      lcd_putc("BT5_FEQ_SET"); 
-                     lcd_gotoxy(5, 2);
-                     printf(lcd_putc,"%lu",inputFeq);
-                     lcd_gotoxy(12,2);
-                     lcd_putc("Hz");
-                     fakePointer = -1;
                      break;
-            case 16: lcd_putc('\f');
-                     lcd_gotoxy(3, 1); 
+            case 16: lcd_gotoxy(3, 1); 
                      lcd_putc("BT6_FEQ_SET"); 
-                     lcd_gotoxy(5, 2);
-                     printf(lcd_putc,"%lu",inputFeq);
-                     lcd_gotoxy(12,2);
-                     lcd_putc("Hz");
-                     fakePointer = -1;
                      break;
-            case 99: lcd_putc('\f');
-                     lcd_gotoxy(4, 1); 
+            default: lcd_gotoxy(3, 1); 
                      lcd_putc("CURRENT_FEQ");
-                     lcd_gotoxy(5, 2);           // Go to column 7 row 2
-                     printf(lcd_putc,"%lu",inputFeq);   // Write num with 5 numbers max
-                     lcd_gotoxy(12,2);
-                     lcd_putc("Hz");
-                     fakePointer = -1;
                      break;
-            defalut : disable_interrupts(INT_TIMER1); break;
-                     
          }
+      lcd_gotoxy(5, 2);           // Go to column 7 row 2
+      printf(lcd_putc,"%lu",inputFeq);   // Write num with 5 numbers max
       if (!input(PIN_C2)){//reset
          inputFeq = 500;
          lcd_putc('\f');
          fakePointer = 7;
-         printf("reset pressed\n");
          
       }
       if (!input(PIN_B5)){//inc
@@ -272,8 +166,7 @@ void main()
             inputFeq = 25000;
             
          }
-         fakePointer = 99;
-         printf("inc pressed\n");
+         fakePointer = -1;
       }
       if (!input(PIN_B4)){//dec
          if(inputFeq >500){
@@ -282,65 +175,63 @@ void main()
          else {
             inputFeq = 500;
          }
-         fakePointer = 99;
-         printf("dec pressed\n");
+         fakePointer = -1;
       }
-
-      if(!input(PIN_B7)){
+      lcd_gotoxy(12,2);
+      lcd_putc("Hz");
+      if(setIsPressed){
          switch(lastButton)
          {
          case 1:  c_but1 = convertTimer(inputFeq);
                   c_feq_but1 = inputFeq;
-                  fakePointer = 11;
-                  printf("set pressed\n");
+                  fakePointer = 11; 
                   break;
          case 2:  c_but2 = convertTimer(inputFeq);
                   c_feq_but2 = inputFeq; 
                   fakePointer = 12; 
-                  printf("set pressed\n");
                   break;
          case 3:  c_but1 = convertTimer(inputFeq);
                   c_feq_but3 = inputFeq; 
                   fakePointer = 13;  
-                  printf("set pressed\n");
                   break;
          case 4:  c_but1 = convertTimer(inputFeq);
                   c_feq_but4 = inputFeq; 
                   fakePointer = 14;
-                  printf("set pressed\n");
                   break;
          case 5:  c_but1 = convertTimer(inputFeq);
                   c_feq_but5 = inputFeq; 
                   fakePointer = 15;  
-                  printf("set pressed\n");
                   break;
          case 6:  c_but1 = convertTimer(inputFeq);
                   c_feq_but6 = inputFeq; 
                   fakePointer = 16;
-                  printf("set pressed\n");
                   break;
          }
       }
-      
       if(!input(PIN_B3)){
          lastButton = 1;
+         printf("1 pressed\n");
          START_TIME  = c_but1;
          enable_interrupts(INT_TIMER1);
-         printf("1 pressed\n");
+         lcd_putc('\f');
          fakePointer = 1;
+         lcd_Show(c_feq_but1);
       }
       else if(!input(PIN_B2)){
          lastButton = 2;
          START_TIME  = c_but2;
          enable_interrupts(INT_TIMER1);
          printf("2 pressed\n");
+         lcd_putc('\f');
          fakePointer = 2;
+         lcd_Show(c_feq_but2);
       }
       else if(!input(PIN_B1)){
          lastButton = 3;
          START_TIME  = c_but3;
          enable_interrupts(INT_TIMER1);
-         printf("3 pressed\n");
+          printf("3 pressed\n");
+          lcd_putc('\f');
          fakePointer = 3;
          lcd_Show(c_feq_but3);
       }
@@ -349,6 +240,7 @@ void main()
          START_TIME  = c_but4;
          enable_interrupts(INT_TIMER1);
           printf("4 pressed\n");
+          lcd_putc('\f');
          fakePointer = 4;
          lcd_Show(c_feq_but4);
       }
@@ -357,6 +249,7 @@ void main()
          START_TIME  = c_but5;
          enable_interrupts(INT_TIMER1);
           printf("5 pressed\n");
+          lcd_putc('\f');
          fakePointer = 5;
          lcd_Show(c_feq_but5);
       }
@@ -365,9 +258,11 @@ void main()
          START_TIME  = c_but6;
          enable_interrupts(INT_TIMER1);
          printf("6 pressed\n");
+         lcd_putc('\f');
          fakePointer = 6;
          lcd_Show(c_feq_but6);
       }
       
    }  
 }
+
